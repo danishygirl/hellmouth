@@ -118,3 +118,37 @@
 .sheet-symbol-icon{overflow:hidden}
 .sheet-data dd{overflow-wrap:anywhere}
 .character-avatar[aria-disabled="true"]{cursor:default}
+
+
+/* V45 — Layout refinado do Fichário. Altere estes valores diretamente no GitHub. */
+:root{
+  --file-refined-gap:14px;
+  --file-refined-symbol:27px;
+}
+.sheet-photo-frame{margin-top:0}
+.sheet-heading{align-items:center;padding-bottom:23px}
+.sheet-heading h2{margin-top:0}
+.sheet-footer{justify-content:flex-end}
+.sheet-symbols{gap:var(--file-refined-gap);margin:2px 0 24px}
+.sheet-symbol-box{min-width:0;min-height:88px;display:flex;flex-direction:column;justify-content:center;gap:11px;padding:13px 15px;background:#fafaf9;border:1px solid #e8e8e5;border-radius:12px}
+.sheet-symbol-label{font-size:10px;letter-spacing:.07em;text-transform:none;color:#a0a29e}
+.sheet-symbol-row{margin:0;gap:11px;display:flex;align-items:center;min-width:0;color:#666964;font-size:12px;line-height:1.45}
+.sheet-symbol-row #sheet-class-kicker,.sheet-symbol-row #sheet-clan-kicker{min-width:0;overflow-wrap:anywhere;text-transform:none;letter-spacing:0}
+.sheet-symbol-icon{flex:0 0 var(--file-refined-symbol);width:var(--file-refined-symbol);height:var(--file-refined-symbol);background:transparent;border-radius:0;overflow:visible;display:grid;place-items:center;font-size:20px;color:#515451;line-height:1}
+.sheet-symbol-icon img{width:100%;height:100%;object-fit:contain;filter:none}
+.sheet-info-band{gap:12px;margin:0 0 21px;align-items:stretch}
+.sheet-info-band>div{min-width:0;min-height:76px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:14px 17px;background:#fafaf9;border:1px solid #e5e6e2;border-radius:12px}
+.sheet-info-band span{font-size:10px;letter-spacing:.04em;text-transform:none;color:#999c97}
+.sheet-info-band strong{margin:0;color:#626560;font-size:13px;font-weight:400;line-height:1.5;overflow-wrap:anywhere}
+.sheet-case-head{align-items:center;margin-bottom:16px}
+.sheet-case-head h3{font-size:18px;font-weight:400;margin:0;letter-spacing:0;color:#595c58}
+.sheet-case-head>span{font-size:10px;letter-spacing:.02em;text-transform:none;color:#a0a39e}
+.sheet-items{gap:12px;align-items:stretch}
+.sheet-item{min-width:0;min-height:110px;padding:15px 13px;gap:12px;align-items:center;background:#fafaf9;border:1px solid #e4e5e1;border-radius:12px}
+.sheet-item-figure{width:44px;height:44px;flex:0 0 44px;border:1px solid #e5e6e2;background:#f0f0ed;border-radius:10px;font-size:19px}
+.sheet-item h4{font-size:12px;font-weight:400;line-height:1.35;margin-bottom:6px}
+.sheet-item p{font-size:11px;line-height:1.6;overflow-wrap:anywhere}
+.character-badge .symbol{background:none;border-radius:0;width:20px;height:20px}
+.character-badge .badge-image{width:19px;height:19px}
+@media(max-width:860px){.sheet-symbols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.sheet-info-band{grid-template-columns:1fr}.sheet-item{min-height:85px}.sheet-symbols{gap:8px}.sheet-symbol-box{padding:12px 10px}.sheet-symbol-row{gap:7px}.sheet-symbol-icon{flex-basis:24px;width:24px;height:24px}.sheet-case-head{gap:12px}}

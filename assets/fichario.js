@@ -117,8 +117,8 @@ function openFile(index, preserveFocus=false){
   $('sheet-photoplayer').textContent = c.photoplayer || 'A definir';
   $('sheet-class').textContent = c.className;
   $('sheet-clan').textContent = c.clan;
-  $('sheet-class-kicker').textContent = c.className.toUpperCase();
-  $('sheet-clan-kicker').textContent = String(c.clan || '—').toUpperCase();
+  $('sheet-class-kicker').textContent = c.className;
+  $('sheet-clan-kicker').textContent = String(c.clan || '—');
   $('sheet-class-icon').textContent = c.classIcon || '•';
   $('sheet-clan-icon').innerHTML = c.clanIconImage ? `<img src="${esc(c.clanIconImage)}" alt="">` : esc(c.clanIcon || '•');
   $('sheet-band-class').textContent = c.className;

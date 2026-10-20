@@ -1,0 +1,54 @@
+/* HELLMOUTH — CLÃS / EDIÇÃO GERAL */
+:root{--cl-bg:#f5f5f3;--cl-paper:#fff;--cl-text:#565858;--cl-muted:#999b99;--cl-line:#dfe0dc;--cl-font:Calibri,'Segoe UI',Arial,sans-serif;--cl-symbol-size:70px;--cl-feature-size:170px;--cl-space:80px}
+.clans-shell{max-width:1150px;margin:0 auto;padding:0 clamp(22px,5vw,65px) 85px;color:var(--cl-text);font-family:var(--cl-font)}
+.clans-top{padding:95px 0 85px;text-align:center}.clans-top .micro{font-size:10px;letter-spacing:.32em;color:#8c8d8b}.clans-top h1{font:400 clamp(30px,5vw,60px)/1.1 var(--cl-font);letter-spacing:.28em;margin:25px 0 15px;padding-left:.25em}.clans-top .underline{height:2px;width:58px;background:#5d5f5d;margin:31px auto 0}.clans-top p{font-size:12px;color:#929491;line-height:1.8;max-width:440px;margin:24px auto 0}
+.clans-search{display:flex;gap:12px;align-items:center;max-width:480px;margin:0 auto 52px;padding:9px 12px;background:#fff;border:1px solid #e5e6e3;border-radius:6px}.clans-search input{min-width:0;flex:1;border:0;outline:none;color:#686b68;font:12px var(--cl-font)}.clans-search button{cursor:pointer;border:0;background:#efefed;border-radius:3px;padding:9px 13px;color:#777a77;font:10px var(--cl-font)}.clans-search button:hover{background:#e1e2df}
+.clans-icons{display:flex;flex-wrap:wrap;gap:18px 34px;justify-content:center;align-items:start;margin:0 auto 85px;max-width:950px}.clan-select{min-width:110px;width:128px;display:flex;flex-direction:column;gap:14px;align-items:center;border:0;background:transparent;padding:13px 9px 18px;cursor:pointer;color:#777a77;font:10px var(--cl-font);letter-spacing:.12em;transition:transform .2s,color .2s}.clan-select:hover,.clan-select:focus-visible{transform:translateY(-3px);color:#343635}.clan-select[aria-pressed=true]{color:#272929}.clan-select[aria-pressed=true] .clan-symbol{outline:1px solid #a9aba7;outline-offset:9px;background:#ecece9}
+.clan-symbol{width:var(--cl-symbol-size);height:var(--cl-symbol-size);display:grid;place-items:center;border-radius:50%;font:44px/1 Georgia,serif;color:#393c3a;transition:background .2s}.clan-symbol img{max-width:85%;max-height:85%;object-fit:contain;filter:grayscale(1) opacity(.75)}
+.clan-feature{min-height:530px;display:grid;grid-template-columns:minmax(180px,.85fr) minmax(0,1.45fr);gap:clamp(25px,5vw,80px);border-top:1px solid var(--cl-line);padding-top:65px}
+.clan-hero-mark{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:19px}.clan-hero-symbol{width:var(--cl-feature-size);height:var(--cl-feature-size);display:grid;place-items:center;font:120px/1 Georgia,serif;color:#303333}.clan-hero-symbol img{width:100%;height:100%;object-fit:contain;filter:grayscale(1) saturate(.3) opacity(.8)}.clan-hero-mark small{font:10px var(--cl-font);letter-spacing:.28em;color:#a4a5a2}
+.clan-hero-content{animation:clanFade .22s ease}.clan-hero-content .kicker{font-size:10px;letter-spacing:.18em;color:#a2a4a0}.clan-hero-content h2{font-size:clamp(27px,4vw,49px);font-weight:400;letter-spacing:-.045em;margin:18px 0 12px}.clan-lead{font:italic 17px/1.55 Georgia,serif;color:#656764;margin:0 0 28px;max-width:560px}.clan-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:28px}.clan-meta div{border-top:1px solid var(--cl-line);padding-top:10px}.clan-meta b{display:block;font-weight:500;font-size:10px;letter-spacing:.1em;color:#a1a3a0;text-transform:uppercase;margin-bottom:8px}.clan-meta span{font-size:12px;line-height:1.6;color:#737673}
+.clan-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.clan-columns p{font-size:13px;line-height:1.88;text-align:justify;color:#838582;margin:0 0 16px}
+.clans-empty{font-size:12px;color:#888;text-align:center;padding:30px}.clans-empty[hidden]{display:none}.clan-pager{display:flex;justify-content:space-between;gap:15px;margin-top:65px;padding:25px 0;border-top:1px solid var(--cl-line)}.clan-pager button{cursor:pointer;font:11px var(--cl-font);color:#737571;background:none;border:0;padding:8px 0}.clan-pager button:hover{text-decoration:underline}.clan-pagefoot{border-top:1px solid var(--cl-line);padding-top:20px;color:#929491;font-size:10px;letter-spacing:.15em;display:flex;justify-content:space-between}
+@keyframes clanFade{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:740px){.clans-top{padding:50px 0 55px}.clans-icons{gap:8px;margin-bottom:45px}.clan-select{width:100px;min-width:90px}.clan-feature{grid-template-columns:1fr;min-height:0;padding-top:36px;gap:22px}.clan-hero-symbol{width:110px;height:110px;font-size:79px}.clan-hero-mark{gap:4px}.clan-meta{grid-template-columns:1fr 1fr}.clan-columns{grid-template-columns:1fr}.clan-pagefoot{gap:15px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.clan-hero-content{animation:none}.clan-select{transition:none}}
+
+/* V10 — conteúdo integralmente ABAIXO dos símbolos; layout editorial */
+.clan-feature{display:flex;flex-direction:column;align-items:stretch;gap:36px;min-height:0;padding-top:68px}
+.clan-hero-mark{align-items:center;justify-content:center;gap:10px}
+.clan-hero-symbol{width:var(--cl-feature-size);height:var(--cl-feature-size)}
+.clan-hero-content{width:100%;max-width:100%;text-align:center}
+.clan-hero-content .kicker{display:block;text-align:center}
+.clan-hero-content h2{text-align:center;margin:14px 0 18px}
+.clan-lead{max-width:740px;margin:0 auto 45px;padding:0 16px 22px;border-bottom:1px solid var(--cl-line);text-align:center;font:italic clamp(18px,2.4vw,26px)/1.48 Georgia,serif;color:#626562}
+.clan-meta{max-width:920px;margin:0 auto 49px;text-align:left;gap:20px}
+.clan-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,5vw,72px);text-align:left;border-top:1px solid var(--cl-line);padding-top:29px}
+.clan-columns p{font-size:13px;line-height:1.95}
+@media(max-width:740px){.clan-feature{padding-top:42px;gap:23px}.clan-hero-symbol{width:120px;height:120px}.clan-lead{margin-bottom:30px}.clan-meta{margin-bottom:32px;gap:10px}.clan-columns{grid-template-columns:1fr;gap:0;padding-top:20px}}
+
+/* V11 — COMPOSIÇÃO FIEL À REFERÊNCIA: EMBLEMA CENTRAL, ÍCONES E TRÊS COLUNAS */
+:root{--cl-head-symbol:270px;--cl-paragraph-leading:2.08;--cl-text-column-gap:48px}
+.clans-top{padding:58px 0 35px}
+.clans-monument{width:var(--cl-head-symbol);height:var(--cl-head-symbol);margin:56px auto 63px;display:grid;place-items:center;font:210px/1 Georgia,serif;color:#303131}
+.clans-monument img{width:100%;height:100%;object-fit:contain;filter:grayscale(1) opacity(.87)}
+.clans-top h1{font-size:clamp(28px,3.5vw,40px);letter-spacing:.42em;margin:0 0 8px;font-weight:600}
+.clans-top .underline{width:55px;margin:42px auto 0}
+.clans-top p{margin:22px auto 0;font-size:11px;line-height:1.9}
+.clans-search{margin:18px auto 58px}
+.clans-icons{margin-bottom:65px;gap:12px 23px}
+.clan-select{width:134px;min-width:112px;gap:16px;letter-spacing:.12em;line-height:1.5}
+.clan-select[aria-pressed=true] .clan-symbol{outline:0;border-bottom:1px solid #8c8f8b;background:transparent;border-radius:0}
+.clan-symbol{border-radius:0}
+.clan-feature{padding-top:54px;border-top:1px solid #d4d5d2;display:block;min-height:0}
+.clan-record-heading{text-align:center;margin:0 auto 64px}
+.clan-record-heading span{font-size:9px;letter-spacing:.23em;color:#969894}
+.clan-record-heading h2{font-size:clamp(20px,3vw,29px);font-weight:500;letter-spacing:.14em;margin:16px 0 0;text-transform:uppercase}
+.clan-editorial-grid{display:grid;grid-template-columns:1.06fr 1fr 1fr;gap:var(--cl-text-column-gap);align-items:start;text-align:justify}
+.editorial-impact{padding:0 3px}
+.editorial-quote{margin:0 0 30px;font:400 clamp(18px,2.1vw,24px)/1.55 Georgia,'Times New Roman',serif;color:#4c4e4b;text-align:right}
+.editorial-facts{border-top:1px solid var(--cl-line);padding-top:16px;display:flex;flex-direction:column;gap:9px;text-align:right;font:10px/1.65 var(--cl-font);letter-spacing:.1em;text-transform:uppercase;color:#989a96}
+.editorial-body p{margin:0 0 22px;font-size:12px;line-height:var(--cl-paragraph-leading);color:#838582;text-align:justify;hyphens:auto}
+.clan-folio{text-align:right;margin:25px 0 0;color:#c2c8d2;font-size:31px;font-weight:700}
+@media(max-width:760px){.clans-monument{--cl-head-symbol:190px;margin:38px auto 48px;font-size:145px}.clan-editorial-grid{grid-template-columns:1fr 1fr;gap:23px}.editorial-impact{grid-column:1/-1}.editorial-quote{text-align:center}.editorial-facts{flex-direction:row;justify-content:center;flex-wrap:wrap;gap:14px}.clans-icons{gap:10px 5px;margin-bottom:37px}.clan-select{width:95px;min-width:80px}.clan-symbol{width:54px;height:54px;font-size:34px}.clan-feature{padding-top:34px}.clan-record-heading{margin-bottom:34px}}
+@media(max-width:480px){.clan-editorial-grid{grid-template-columns:1fr}.editorial-impact{grid-column:auto}.editorial-body p{line-height:1.9}.clans-top{padding-top:30px}}

@@ -26,3 +26,27 @@
 .community-link.is-placeholder{cursor:default}
 .community-link.is-placeholder .community-link-name{color:#727571}
 @media(max-width:700px){.places-main{max-width:100%}.place-entry{grid-template-columns:76px minmax(0,auto) 20px;gap:12px}.place-entry-copy{width:auto}.place-name{font-size:14px}.place-arrow{margin-left:0}.community-navigation{margin-top:68px}.community-nav-top>span:last-child{font-size:8px}.community-link{column-gap:13px}.community-link-name{font-size:14px}}
+
+/* V16 — eixo editorial único: apresentação, catálogo e Navegação.
+   Conserva a centralização da V15 e os tamanhos originais. */
+:root{--place-content-width:620px}
+.places-header,
+.places-list-heading,
+.places-list,
+.places-empty,
+.places-end,
+.community-navigation{
+  width:min(100%,var(--place-content-width));
+  margin-left:auto;
+  margin-right:auto;
+}
+/* O cabeçalho partilha as mesmas margens laterais das duas seções. */
+.places-header{max-width:none}
+@media(max-width:700px){
+  .places-header,
+  .places-list-heading,
+  .places-list,
+  .places-empty,
+  .places-end,
+  .community-navigation{width:100%}
+}

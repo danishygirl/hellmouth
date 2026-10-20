@@ -52,3 +52,10 @@
 .clan-folio{text-align:right;margin:25px 0 0;color:#c2c8d2;font-size:31px;font-weight:700}
 @media(max-width:760px){.clans-monument{--cl-head-symbol:190px;margin:38px auto 48px;font-size:145px}.clan-editorial-grid{grid-template-columns:1fr 1fr;gap:23px}.editorial-impact{grid-column:1/-1}.editorial-quote{text-align:center}.editorial-facts{flex-direction:row;justify-content:center;flex-wrap:wrap;gap:14px}.clans-icons{gap:10px 5px;margin-bottom:37px}.clan-select{width:95px;min-width:80px}.clan-symbol{width:54px;height:54px;font-size:34px}.clan-feature{padding-top:34px}.clan-record-heading{margin-bottom:34px}}
 @media(max-width:480px){.clan-editorial-grid{grid-template-columns:1fr}.editorial-impact{grid-column:auto}.editorial-body p{line-height:1.9}.clans-top{padding-top:30px}}
+
+/* NAVEGAÇÃO EXPLÍCITA DA PÁGINA CLÃS — TEXTO E ESPAÇAMENTOS EDITÁVEIS */
+.clans-return-nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 0 18px;border-bottom:1px solid #dedfdb;font-family:Calibri,'Segoe UI',Arial,sans-serif}
+.clans-return-nav a,.clans-return-nav button{font:11px Calibri,'Segoe UI',Arial,sans-serif;letter-spacing:.085em;color:#626764;border:1px solid #d6d8d4;border-radius:999px;background:#fff;padding:11px 16px;cursor:pointer;text-decoration:none;transition:background .18s ease,color .18s ease}
+.clans-return-nav a:hover,.clans-return-nav button:hover,.clans-return-nav a:focus-visible,.clans-return-nav button:focus-visible{background:#e9eae7;color:#343734}
+.clans-return-nav a:nth-of-type(2){margin-left:auto}
+@media(max-width:600px){.clans-return-nav{gap:7px}.clans-return-nav a,.clans-return-nav button{font-size:10px;padding:9px 11px}.clans-return-nav a:nth-of-type(2){margin-left:0}}

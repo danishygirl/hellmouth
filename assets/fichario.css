@@ -152,3 +152,13 @@
 .character-badge .badge-image{width:19px;height:19px}
 @media(max-width:860px){.sheet-symbols{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.sheet-info-band{grid-template-columns:1fr}.sheet-item{min-height:85px}.sheet-symbols{gap:8px}.sheet-symbol-box{padding:12px 10px}.sheet-symbol-row{gap:7px}.sheet-symbol-icon{flex-basis:24px;width:24px;height:24px}.sheet-case-head{gap:12px}}
+
+/* V46 — Personal case sem cartões, somente miniaturas e descrição */
+.sheet-items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.sheet-item{min-height:0;padding:9px 4px;display:flex;gap:13px;align-items:center;background:transparent;border:0;border-radius:0;box-shadow:none}
+.sheet-item-figure{width:44px;height:44px;flex:0 0 44px;border:1px solid #e5e6e2;border-radius:9px;background:#f0f0ed;display:grid;place-items:center}
+.sheet-item h4{margin:0 0 5px;font-size:12px;font-weight:400;color:#656762}
+.sheet-item p{font-size:11px;line-height:1.65;color:#9ea09c;margin:0}
+.sheet-heading{padding-bottom:24px}
+.sheet-story-panel{margin-top:0}
+@media(max-width:620px){.sheet-items{grid-template-columns:1fr;gap:9px}}

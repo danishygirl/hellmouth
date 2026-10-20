@@ -59,3 +59,10 @@
 .clans-return-nav a:hover,.clans-return-nav button:hover,.clans-return-nav a:focus-visible,.clans-return-nav button:focus-visible{background:#e9eae7;color:#343734}
 .clans-return-nav a:nth-of-type(2){margin-left:auto}
 @media(max-width:600px){.clans-return-nav{gap:7px}.clans-return-nav a,.clans-return-nav button{font-size:10px;padding:9px 11px}.clans-return-nav a:nth-of-type(2){margin-left:0}}
+
+/* Emblemas originais enviados pelo usuário: fundo transparente e traço preto */
+.clan-symbol img,.clan-hero-symbol img,.clans-monument img{filter:none!important;opacity:1!important;object-fit:contain}
+.clan-symbol img{max-width:90%;max-height:90%;width:auto;height:auto}
+
+/* Emblemas originais: sem transparência artificial nem filtro tonal. */
+.clan-symbol img,.clan-hero-symbol img{filter:none!important;opacity:1!important}

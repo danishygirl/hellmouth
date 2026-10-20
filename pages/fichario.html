@@ -1,1 +1,160 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f5f3"><title>Fichário — HELLMOUTH</title><link rel="stylesheet" href="../assets/styles.css"></head><body><div class="page-shell subpage-shell"><header class="masthead"><a class="wordmark" href="../index.html">HELLMOUTH<span class="wordmark-point">.</span></a><span class="masthead-right">02 / 05</span></header><main class="subpage-main"><span class="subpage-kicker">HELLMOUTH / SECTION 02</span><h1 class="subpage-title">Fichário<span class="period">.</span></h1><p class="subpage-desc">Personagens, perfis e arquivos do universo. Esta página está preparada para receber o layout próprio que vamos desenvolver depois.</p><a class="return-home" href="../index.html">← VOLTAR À PÁGINA INICIAL</a></main><footer class="site-footer"><span>© HELLMOUTH</span><span>THE TOWN REMEMBERS EVERYTHING.</span></footer></div></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <title>Fichário — HELLMOUTH</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/fichario.css">
+</head>
+<body>
+<div class="page-shell files-page" id="top">
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">HELLMOUTH<span class="wordmark-point">.</span></a>
+    <span class="masthead-right">CHARACTER INDEX / 02</span>
+  </header>
+
+  <main>
+    <section class="files-intro">
+      <div>
+        <span class="files-eyebrow">PERSONNEL / ARCHIVE</span>
+        <h1>Fichário<span>.</span></h1>
+        <p>Registro de habitantes, criaturas e nomes que circulam pelos corredores de Sunnyvale. Cada ficha pode exibir ícones, símbolos e pequenos emblemas para classe e clã.</p>
+      </div>
+      <div class="files-intro-aside">
+        <span>HELLMOUTH / SUNNYVALE</span>
+        <span>EDITORIAL FILE — 2026</span>
+      </div>
+    </section>
+
+    <section class="files-index" aria-labelledby="index-title">
+      <div class="files-toolbar">
+        <div>
+          <span class="files-eyebrow">REGISTER / 001—∞</span>
+          <h2 id="index-title">Character archive</h2>
+        </div>
+
+        <div class="files-search-block">
+          <label class="files-search">
+            <span class="sr-only">Pesquisar nome, jogador, classe ou clã</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="files-query" type="search" placeholder="Search character, player, class, clan..." autocomplete="off">
+            <span id="files-count" aria-live="polite">—</span>
+          </label>
+          <p class="files-toolbar-note">Clique na <b>foto</b> para abrir o perfil no Loreverse. Clique no <b>nome</b> ou na <b>seta</b> para abrir a ficha completa.</p>
+        </div>
+      </div>
+
+      <div class="files-filters" id="files-filters" role="group" aria-label="Filtrar personagens por classe"></div>
+      <div id="files-groups" class="files-groups"></div>
+      <p id="files-empty" class="files-empty" hidden>Nenhum personagem encontrado. Tente outro nome, classe ou clã.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© HELLMOUTH / PERSONAL FILES</span>
+    <a href="../index.html">← RETORNAR À MAIN</a>
+  </footer>
+</div>
+
+<div id="character-view" class="character-view" hidden aria-hidden="true">
+  <div class="character-sheet">
+    <header class="sheet-nav">
+      <button id="sheet-back" class="sheet-text-button" type="button">← VOLTAR AO FICHÁRIO</button>
+      <span>HELLMOUTH / CONFIDENTIAL DOSSIER</span>
+      <button id="sheet-next" class="sheet-text-button" type="button">PRÓXIMO ARQUIVO →</button>
+    </header>
+
+    <div class="sheet-label-row">
+      <span id="sheet-code">PERSONNEL FILE / 001</span>
+      <span>TECHNICAL SHEET · SUNNYVALE</span>
+    </div>
+
+    <div class="sheet-grid">
+      <aside class="sheet-profile">
+        <div class="sheet-profile-top">
+          <span class="sheet-small-label">ARCHIVE PHOTO</span>
+          <div class="sheet-photo-frame">
+            <img id="sheet-photo" alt="Retrato do personagem">
+          </div>
+        </div>
+
+        <div class="sheet-symbols">
+          <div class="sheet-symbol-box">
+            <span class="sheet-symbol-label">CLASS</span>
+            <div class="sheet-symbol-row"><span id="sheet-class-icon" class="sheet-symbol-icon">✦</span><span id="sheet-class-kicker">CLASS</span></div>
+          </div>
+          <div class="sheet-symbol-box">
+            <span class="sheet-symbol-label">CLAN</span>
+            <div class="sheet-symbol-row"><span id="sheet-clan-icon" class="sheet-symbol-icon">✶</span><span id="sheet-clan-kicker">CLAN</span></div>
+          </div>
+        </div>
+
+        <dl class="sheet-data">
+          <div><dt>PLAYER / ID</dt><dd id="sheet-player"></dd></div>
+          <div><dt>NOME</dt><dd id="sheet-name"></dd></div>
+          <div><dt>IDADE</dt><dd id="sheet-age"></dd></div>
+          <div><dt>CLASSE</dt><dd id="sheet-class"></dd></div>
+          <div><dt>CLÃ</dt><dd id="sheet-clan"></dd></div>
+        </dl>
+
+        <a id="sheet-profile-link" class="sheet-external" href="#" target="_blank" rel="noopener noreferrer">PERFIL NO LOREVERSE ↗</a>
+      </aside>
+
+      <section class="sheet-main">
+        <div class="sheet-heading">
+          <div>
+            <div class="sheet-kicker">CHARACTER DOSSIER</div>
+            <h2 id="sheet-title">Nome do personagem</h2>
+            <span id="sheet-subtitle">Arquivo confidencial</span>
+          </div>
+          <div class="sheet-stamp" aria-hidden="true">HM<br>FILE</div>
+        </div>
+
+        <div class="sheet-info-band">
+          <div>
+            <span>CLASS MARK</span>
+            <strong id="sheet-band-class">CLASS</strong>
+          </div>
+          <div>
+            <span>CLAN MARK</span>
+            <strong id="sheet-band-clan">CLAN</strong>
+          </div>
+          <div>
+            <span>LOCAL FILE</span>
+            <strong>SUNNYVALE</strong>
+          </div>
+        </div>
+
+        <div class="sheet-story-panel" aria-labelledby="sheet-story-title">
+          <div class="sheet-section-heading">
+            <h3 id="sheet-story-title">Breve história</h3>
+            <span>ROLLING TEXT / 01</span>
+          </div>
+          <div id="sheet-story" class="sheet-story" tabindex="0" aria-label="História do personagem, área com rolagem"></div>
+        </div>
+
+        <section class="sheet-case" aria-labelledby="case-title">
+          <div class="sheet-case-head">
+            <div>
+              <span>PERSONAL CASE / 03</span>
+              <h3 id="case-title">Maleta de itens</h3>
+            </div>
+            <span>CAPACIDADE MÁXIMA: 03</span>
+          </div>
+          <div class="sheet-items" id="sheet-items"></div>
+        </section>
+      </section>
+    </div>
+
+    <footer class="sheet-footer">
+      <span>HELLMOUTH / EVERY SECRET HAS A NAME</span>
+      <button class="sheet-text-button" id="sheet-close-bottom" type="button">← VOLTAR</button>
+    </footer>
+  </div>
+</div>
+
+<script src="../assets/fichario.js"></script>
+</body>
+</html>

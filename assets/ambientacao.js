@@ -7,7 +7,7 @@ name: nome | category: categoria | loreverseUrl: link direto para o tópico no L
 const places = [
   {
     "name": "Sunnyvale",
-    "loreverseUrl": "", loreverse.world/universos/hellmouth
+    "loreverseUrl": "", //loreverse.world/universos/hellmouth
     "category": "LOUISIANA / UNITED STATES",
     "image": "../assets/ambientacao/sunnyvale.webp",
     "lead": "Entre ruas sombreadas, quase tudo parece normal.",

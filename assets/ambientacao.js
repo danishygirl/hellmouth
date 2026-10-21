@@ -17,7 +17,7 @@ const places = [
   },
   {
     "name": "Ruas de Sunnyvale",
-    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
+    "https://loreverse.world/topicos/2054": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "CIDADE / RUAS",
     "image": "../assets/ambientacao/ruas-sunnyvale.webp",
     "lead": "O centro comercial e as ruas tradicionais de Sunnyvale.",

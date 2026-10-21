@@ -47,6 +47,75 @@ const characters = [
       'Christian é conhecido por seu temperamento extremista e suas ideologias políticas conservadoras. Por isso, lidera o grupo de civis que persegue e não tolera as criaturas sobrenaturais da cidade, principalmente os vampiros.'
     ],
     items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
+  },
+  {
+    id: 'npc-002',
+    name: 'Sydra Windsor',
+    player: 'nonplayable',
+    age: '44 anos',
+    photoplayer: 'Dominique Jackson', // Nome do ator/atriz que interpreta o personagem
+    className: 'Bruxa',
+    classIcon: '✦',
+    clan: "Manor's Hall",
+    clanIcon: '✶',
+    clanIconImage: '../assets/clan-symbols/manors-hall.webp',
+    subtitle: "MANOR'S HALL / SUNNYVALE",
+    avatar: '../assets/characters/sydra-windsor.webp',
+    portrait: '../assets/characters/sydra-windsor.webp',
+    profileUrl: '', // URL do Loreverse, caso haja
+    story: [
+      'Sydra Windsor é a diretora da Academia de Artes Manor\'s Hall. A mulher está na direção da academia há quase dez anos e lidera o instituto com unhas e dentes, marcada por uma personalidade ríspida e uma aparência intimidadora.',
+      'A bruxa faz parte da classe alta de Sunnyvale, escondendo não só a si mesma, como também o corpo discente da escola para bruxas e feiticeiros há anos.'
+    ],
+    items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
+  },
+  {
+    // CASSIAN PENDELTON — todos os campos abaixo podem ser editados pelo GitHub.
+    id: 'npc-003',
+    name: 'Cassian Pendleton',
+    player: 'nonplayable',
+    age: '261 anos (aparência de 25 anos)', // Cronologia adotada: transformação em 1790, aos 25
+    photoplayer: 'Cody Fern',
+    className: 'Vampiro',
+    classIcon: '✦',
+    clan: 'Camarilla: Toreador',
+    clanIcon: '❀',
+    clanIconImage: '../assets/clan-symbols/toreador.webp',
+    subtitle: 'PRÍNCIPE DE SUNNYVALE / CAMARILLA',
+    avatar: '../assets/characters/cassian-pendleton.webp',
+    portrait: '../assets/characters/cassian-pendleton.webp',
+    profileUrl: '', // Preencha com o endereço do perfil Loreverse, quando houver.
+    story: [
+      'Nascido na aristocracia rural inglesa no final do século XVIII, Cassian Pendleton foi criado para ser o reflexo da perfeição da Era Georgiana. Jovem brilhante, dedicava seus dias à poesia, ao patronato das artes cênicas e à arquitetura clássica. Ele não via a arte apenas como estética, mas como a ferramenta definitiva de ordem, civilização e controle social.',
+      'Sua obsessão por simetria, beleza e etiqueta impecável chamou a atenção de uma influente Anciã do Clã Toreador de Londres. Fascinada por sua mente afiada e frieza cirúrgica disfarçada de charme, ela o retirou do mundo dos vivos na noite de seu aniversário de 25 anos.',
+      'Cassian chegou à Califórnia no final dos anos 1970, logo quando o Vale do Silício começava a pulsar com a revolução tecnológica. Enquanto a maioria dos Anciões da Camarilla desprezava computadores por não compreendê-los, Cassian enxergou o futuro: a tecnologia seria a maior obra de arte e a ferramenta de controle social mais poderosa da história humana.',
+      'Sunnyvale era uma cidade em disputa, cercada por gangues Anarquistas e infiltrada por interesses corporativos obscuros. Usando sua imensa fortuna acumulada ao longo de séculos e sua Disciplina de Presença, Cassian seduziu e controlou os primeiros grandes magnatas da tecnologia da região. Ele comprou quarteirões inteiros através de empresas de fachada e estruturou uma rede de vigilância mortal impecável.',
+      'Em 1988, após arquitetar a derrocada do antigo e incompetente Príncipe local (um Ventrue que faliu politicamente ao ignorar o mercado tecnológico), Cassian Pendleton autodeclarou-se Príncipe de Sunnyvale.'
+    ],
+    items: [] // Até 3 itens, editáveis aqui.
+  },
+  {
+    id: 'npc-004',
+    name: 'Fenris Molkov',
+    player: 'nonplayable',
+    age: '35 anos',
+    photoplayer: 'Johnny Sibilly',
+    className: 'Shapeshifter',
+    classIcon: '✦',
+    clan: 'Blackwood Pack',
+    clanIcon: '☽',
+    clanIconImage: '../assets/clan-symbols/blackwood-pack.webp',
+    subtitle: 'ALFA DA ALCATEIA / BLACKWOOD PACK',
+    avatar: '../assets/characters/fenris-molkov.webp',
+    portrait: '../assets/characters/fenris-molkov.webp',
+    profileUrl: '',
+    story: [
+      'Fenris Molkov assumiu a liderança do Blackwood Pack aos 30 anos, não por direito de herança, mas por puro instinto de sobrevivência e poder. Nascido sob uma linhagem de shapeshifters de sangue forte, ele aprendeu cedo que em Sunnyvale a fraqueza atrai a morte.',
+      'Sua ascensão ao topo da alcateia ocorreu há cinco anos, durante a crise da Lua de Sangue. O Alfa anterior estava velho e suas decisões políticas quase expuseram os segredos do clã aos humanos e a corporações rivais. Diante da ruína iminente do clã, Fenris fez o que a natureza exigia: desafiou o antigo líder em combate. A luta foi brutal, mas a ferocidade e a forma de lobo implacável de Fenris garantiram sua vitória e o título de Alfa.',
+      'Hoje, Fenris equilibra a selvajaria de sua natureza com a frieza de um estrategista. Sob o seu comando, o Blackwood Pack recuperou o controle territorial de Sunnyvale e se tornou mais unido do que nunca.',
+      'Para a população humana da cidade, Fenris se passa por um empresário recluso do ramo madeireiro, mas, entre os sobrenaturais, ele é o predador supremo cuja presença impõe silêncio e respeito absoluto. Ele protege os seus com garras de ferro, mas pune a traição sem qualquer hesitação.'
+    ],
+    items: []
   }
 ];
 

@@ -50,3 +50,7 @@
   .places-end,
   .community-navigation{width:100%}
 }
+
+/* V66 — Filtro editorial uniforme para miniaturas e fotos ampliadas. Ajuste aqui. */
+:root{--ambient-saturation:.32;--ambient-gray:.34;--ambient-contrast:.96;}
+.place-thumbnail,.place-modal-img{filter:grayscale(var(--ambient-gray)) saturate(var(--ambient-saturation)) contrast(var(--ambient-contrast))!important;}

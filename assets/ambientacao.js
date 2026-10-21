@@ -7,8 +7,8 @@ name: nome | category: categoria | loreverseUrl: link direto para o tópico no L
 const places = [
   {
     "name": "Sunnyvale",
-    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
-    "category": "CIDADE / CENTRO URBANO",
+    "loreverseUrl": "", //loreverse.world/universos/hellmouth
+    "category": "LOUISIANA / UNITED STATES",
     "image": "../assets/ambientacao/sunnyvale.webp",
     "lead": "Entre ruas sombreadas, quase tudo parece normal.",
     "description": [
@@ -18,7 +18,7 @@ const places = [
   {
     "name": "Ruas de Sunnyvale",
     "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
-    "category": "CIDADE / RUAS E COMÉRCIO",
+    "category": "CIDADE / RUAS",
     "image": "../assets/ambientacao/ruas-sunnyvale.webp",
     "lead": "O centro comercial e as ruas tradicionais de Sunnyvale.",
     "description": [

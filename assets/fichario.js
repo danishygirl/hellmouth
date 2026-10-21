@@ -131,11 +131,13 @@ function drawFilters(){
   filters.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { activeClass = b.dataset.class; drawFilters(); drawRows(); }));
 }
 
-function badge(icon, text, image){
-  const visual = image
+// Visual do índice: classe SEM símbolo; clã COM emblema.
+// Este modelo se aplica automaticamente a personagens adicionados no array characters.
+function badge(icon, text, image, type = 'clan'){
+  const visual = type === 'class' ? '' : `<span class="symbol">${image
     ? `<img class="badge-image" src="${esc(image)}" alt="" loading="lazy">`
-    : esc(icon || '•');
-  return `<span class="character-badge"><span class="symbol">${visual}</span><span class="text">${esc(text || '—')}</span></span>`;
+    : esc(icon || '•')}</span>`;
+  return `<span class="character-badge character-badge--${type}">${visual}<span class="text">${esc(text || '—')}</span></span>`;
 }
 
 function drawRows(){
@@ -159,7 +161,7 @@ function drawRows(){
           </div>
         </div>
         <span class="character-player">${esc(c.player)}</span>
-        <div class="character-badges">${badge(c.classIcon,c.className)}${badge(c.clanIcon,c.clan,c.clanIconImage)}</div>
+        <div class="character-badges">${badge(c.classIcon,c.className,null,'class')}${badge(c.clanIcon,c.clan,c.clanIconImage,'clan')}</div>
         <button type="button" class="character-open" data-open="${c.index}" aria-label="Abrir ficha de ${esc(c.name)}">↗</button>
       </div>`).join('')}
     </section>`;

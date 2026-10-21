@@ -162,3 +162,17 @@
 .sheet-heading{padding-bottom:24px}
 .sheet-story-panel{margin-top:0}
 @media(max-width:620px){.sheet-items{grid-template-columns:1fr;gap:9px}}
+
+
+/* V50 — etiquetas do índice: classe somente texto; clã centralizado e legível.
+   Regras genéricas: valem também para os próximos personagens cadastrados. */
+@media(min-width:861px){
+  .character-row{grid-template-columns:minmax(0,1.7fr) minmax(95px,.62fr) minmax(306px,1.3fr) 32px;gap:14px}
+}
+.character-badges{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:9px;min-width:0}
+.character-badge{box-sizing:border-box;max-width:100%;min-height:35px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:8px 13px;border-radius:999px;line-height:1.35;text-align:center;white-space:normal}
+.character-badge .text{min-width:0;overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:normal;word-break:normal;text-align:center}
+.character-badge--class{min-width:82px;padding-inline:15px}
+.character-badge--clan{min-width:145px;max-width:238px;padding-inline:15px}
+.character-badge--clan .symbol{flex:0 0 20px;width:20px;height:22px;margin:0;display:grid;place-items:center;background:transparent;border-radius:0;line-height:1}
+.character-badge--clan .badge-image{display:block;width:19px;height:19px;object-fit:contain;filter:none}

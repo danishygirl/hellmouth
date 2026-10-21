@@ -54,3 +54,24 @@
 /* V66 — Filtro editorial uniforme para miniaturas e fotos ampliadas. Ajuste aqui. */
 :root{--ambient-saturation:.32;--ambient-gray:.34;--ambient-contrast:.96;}
 .place-thumbnail,.place-modal-img{filter:grayscale(var(--ambient-gray)) saturate(var(--ambient-saturation)) contrast(var(--ambient-contrast))!important;}
+
+/* V67 — Alinhamento com Voltar; catálogo e links em três colunas. */
+:root{--ambient-columns:3;--ambient-gap:22px}
+.ambience-page .places-main{width:100%;max-width:none;margin:0;padding-top:56px}
+.ambience-page .places-header,.ambience-page .places-list-heading,.ambience-page .places-list,.ambience-page .places-empty,.ambience-page .places-end,.ambience-page .community-navigation{width:100%;max-width:none;margin-left:0;margin-right:0}
+.ambience-page .places-list,.ambience-page .community-links{display:grid;grid-template-columns:repeat(var(--ambient-columns),minmax(0,1fr));gap:12px var(--ambient-gap)}
+.ambience-page .place-entry{width:100%;min-width:0;display:grid;grid-template-columns:74px minmax(0,1fr) 14px;gap:12px;align-items:center;justify-content:stretch;padding:16px 2px;border-bottom:1px solid var(--place-line)}
+.ambience-page .place-thumbnail{width:74px;height:74px}
+.ambience-page .place-entry-copy{width:auto;min-width:0}
+.ambience-page .place-name{font-size:14px;line-height:1.35}
+.ambience-page .place-category{font-size:9px;line-height:1.4;letter-spacing:.07em}
+.ambience-page .place-arrow{justify-self:end;margin:0}
+.ambience-page .community-navigation{margin-top:92px}
+.ambience-page .community-link{min-width:0;grid-template-columns:36px minmax(0,1fr) 12px;column-gap:10px;padding:15px 2px}
+.ambience-page .community-link-icon{width:36px;height:36px}
+.ambience-page .community-link-icon svg{width:18px;height:18px}
+.ambience-page .community-link-name{font-size:13px;line-height:1.35}
+.ambience-page .community-link-sub{font-size:10px;line-height:1.4}
+.ambience-page .community-link-arrow{font-size:17px}
+@media(max-width:950px){:root{--ambient-columns:2;--ambient-gap:18px}}
+@media(max-width:610px){:root{--ambient-columns:1}.ambience-page .places-main{padding-top:37px}.ambience-page .places-list,.ambience-page .community-links{row-gap:0}.ambience-page .place-entry{grid-template-columns:76px minmax(0,1fr) 20px;gap:14px}.ambience-page .place-thumbnail{width:76px;height:76px}.ambience-page .community-navigation{margin-top:64px}}

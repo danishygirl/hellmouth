@@ -143,3 +143,53 @@
     width:100%;
   }
 }
+
+
+/* V79 — caixa lateral preenchida somente com o pôster do episódio */
+.episode-sidebar{
+  padding:0 !important;
+  background:transparent !important;
+  border-radius:var(--episode-round);
+  overflow:hidden;
+  display:block !important;
+}
+.episode-sidebar .episode-side-image{
+  width:100%;
+  height:100%;
+  min-height:var(--story-height);
+  aspect-ratio:auto;
+  margin:0 !important;
+  border-radius:var(--episode-round);
+  overflow:hidden;
+  background:#f2f0ed;
+}
+.episode-sidebar .episode-side-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+  filter:saturate(.68) contrast(.97);
+}
+.episode-sidebar .eyebrow,
+.episode-sidebar .episode-side-quote,
+.episode-sidebar .episode-side-summary{
+  display:none !important;
+}
+
+@media(max-width:930px){
+  .episode-sidebar{
+    height:auto !important;
+    min-height:0 !important;
+  }
+  .episode-sidebar .episode-side-image{
+    min-height:0;
+    height:auto;
+    aspect-ratio:2 / 3;
+    max-width:none !important;
+  }
+  .episode-sidebar .episode-side-image img{
+    object-fit:contain;
+    height:auto;
+  }
+}

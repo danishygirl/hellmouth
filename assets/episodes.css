@@ -145,16 +145,18 @@
 }
 
 
-/* V81 — pôster lateral completo, sem cortar título/logo do episódio */
+/* V82 — pôster lateral isolado, sem caixa aparente ao fundo */
 .episode-main-grid{
-  grid-template-columns:minmax(0,1.8fr) minmax(360px,0.95fr);
+  grid-template-columns:minmax(0,1.9fr) minmax(340px,0.9fr);
+  gap:28px;
 }
 .episode-sidebar{
   padding:0 !important;
-  background:#fff !important;
-  border:1px solid #e6e6e6;
-  border-radius:var(--episode-round);
-  overflow:hidden;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  overflow:visible;
   display:flex !important;
   align-items:center;
   justify-content:center;
@@ -165,8 +167,8 @@
   min-height:var(--story-height);
   margin:0 !important;
   border-radius:0;
-  overflow:hidden;
-  background:#f2f0ed;
+  overflow:visible;
+  background:transparent;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -178,7 +180,7 @@
   object-fit:contain;
   object-position:center center;
   filter:saturate(.68) contrast(.97);
-  background:#f2f0ed;
+  background:transparent;
 }
 .episode-sidebar .eyebrow,
 .episode-sidebar .episode-side-quote,
@@ -187,7 +189,7 @@
 }
 
 @media(max-width:930px){
-  .episode-main-grid{grid-template-columns:1fr;}
+  .episode-main-grid{grid-template-columns:1fr;gap:22px;}
   .episode-sidebar{
     height:auto !important;
     min-height:0 !important;

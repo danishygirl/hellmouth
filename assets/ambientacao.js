@@ -1,12 +1,13 @@
 /* HELLMOUTH / AMBIENTAÇÃO — EDITE AQUI
 Adicione ambientes copiando um objeto do array places.
 image aceita endereço de PNG, JPG, WEBP ou SVG, local ou externo.
-name: nome | category: categoria | lead: frase em destaque
+name: nome | category: categoria | loreverseUrl: link direto para o tópico no Loreverse
  description: lista de parágrafos da descrição.
 */
 const places = [
   {
     "name": "Sunnyvale",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "CIDADE / CENTRO URBANO",
     "image": "../assets/ambientacao/sunnyvale.webp",
     "lead": "Entre ruas sombreadas, quase tudo parece normal.",
@@ -17,6 +18,7 @@ const places = [
   },
   {
     "name": "Ruas de Sunnyvale",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "CIDADE / RUAS E COMÉRCIO",
     "image": "../assets/ambientacao/ruas-sunnyvale.webp",
     "lead": "O centro comercial e as ruas tradicionais de Sunnyvale.",
@@ -31,11 +33,13 @@ const places = [
       "Descrição pendente: conteúdo definitivo será inserido depois."
     ],
     "name": "Sunnyvale High",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "INSTITUIÇÃO / ESCOLA",
     "image": "../assets/ambientacao/sunnyvale-high.webp"
   },
   {
     "name": "Departamento Policial",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "INSTITUIÇÃO / SEGURANÇA",
     "image": "../assets/ambientacao/departamento-policial.webp",
     "lead": "Na cidade, algumas ocorrências parecem desaparecer dos arquivos.",
@@ -50,6 +54,7 @@ const places = [
       "Descrição pendente: conteúdo definitivo será inserido depois."
     ],
     "name": "Distrito Comercial",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "CIDADE / COMÉRCIO",
     "image": "../assets/ambientacao/distrito-comercial.webp"
   },
@@ -59,11 +64,13 @@ const places = [
       "Descrição pendente: conteúdo definitivo será inserido depois."
     ],
     "name": "Residencial Tree Hills",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "CIDADE / RESIDENCIAL",
     "image": "../assets/ambientacao/residencial-tree-hills.webp"
   },
   {
     "name": "Reserva Ambiental",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "NATUREZA / RESERVA",
     "image": "../assets/ambientacao/reserva-ambiental.webp",
     "lead": "Um refúgio verde onde nem todas as trilhas levam de volta.",
@@ -78,11 +85,13 @@ const places = [
       "Descrição pendente: conteúdo definitivo será inserido depois."
     ],
     "name": "Moonlight Diner",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "ESTABELECIMENTO / RESTAURANTE",
     "image": "../assets/ambientacao/moonlight-diner.webp"
   },
   {
     "name": "Docks Night Club",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "ESTABELECIMENTO / VIDA NOTURNA",
     "image": "../assets/ambientacao/docks-night-club.webp",
     "lead": "Quando a música aumenta, a cidade revela outra face.",
@@ -93,6 +102,7 @@ const places = [
   },
   {
     "name": "Red Room Bar",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "ESTABELECIMENTO / BAR",
     "image": "../assets/ambientacao/red-room-bar.webp",
     "lead": "Um ponto de encontro para conversas que não cabem na luz do dia.",
@@ -103,6 +113,7 @@ const places = [
   },
   {
     "name": "Academia de Artes Manor Hall",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "INSTITUIÇÃO / EDUCAÇÃO",
     "image": "../assets/ambientacao/manor-hall.webp",
     "lead": "Uma academia de artes que guarda segredos além do palco.",
@@ -112,6 +123,7 @@ const places = [
   },
   {
     "name": "Sunnyvale Memorial Garden",
+    "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
     "category": "LOCAL HISTÓRICO / CEMITÉRIO",
     "image": "../assets/ambientacao/sunnyvale-memorial-garden.webp",
     "lead": "Histórias antigas permanecem entre os mausoléus e jardins.",
@@ -136,12 +148,20 @@ function show(i){
  $('place-modal-img').src=p.image; $('place-modal-img').alt='Imagem de '+p.name;
  $('place-modal-title').textContent=p.name;
  $('place-modal-category').textContent=p.category;
- $('place-modal-lead').textContent=p.lead;
+ const topicLink=$('place-modal-loreverse');
+ const validTopic=/^https?:\/\//i.test((p.loreverseUrl||'').trim());
+ topicLink.href=validTopic?p.loreverseUrl.trim():'#';
+ topicLink.classList.toggle('is-unconfigured',!validTopic);
+ topicLink.setAttribute('aria-disabled',String(!validTopic));
+ topicLink.title=validTopic?'Abrir tópico de '+p.name+' no Loreverse':'Link do Loreverse ainda não cadastrado';
  $('place-modal-description').innerHTML=p.description.map(t=>'<p>'+esc(t)+'</p>').join('');
  modal.hidden=false;modal.setAttribute('aria-hidden','false');document.body.classList.add('place-open');
  modal.scrollTop=0;$('place-modal-close').focus();
 }
 function hide(){modal.hidden=true;modal.setAttribute('aria-hidden','true');document.body.classList.remove('place-open');opener?.focus();}
+$('place-modal-loreverse').addEventListener('click',e=>{
+ if(e.currentTarget.getAttribute('aria-disabled')==='true')e.preventDefault();
+});
 $('place-modal-close').addEventListener('click',hide);
 $('place-modal-next').addEventListener('click',()=>show(current+1));
 modal.addEventListener('click',e=>{if(e.target===modal)hide()});

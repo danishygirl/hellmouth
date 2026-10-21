@@ -75,3 +75,10 @@
 .ambience-page .community-link-arrow{font-size:17px}
 @media(max-width:950px){:root{--ambient-columns:2;--ambient-gap:18px}}
 @media(max-width:610px){:root{--ambient-columns:1}.ambience-page .places-main{padding-top:37px}.ambience-page .places-list,.ambience-page .community-links{row-gap:0}.ambience-page .place-entry{grid-template-columns:76px minmax(0,1fr) 20px;gap:14px}.ambience-page .place-thumbnail{width:76px;height:76px}.ambience-page .community-navigation{margin-top:64px}}
+
+/* V68 — Link individual para os tópicos do Loreverse, substitui frases introdutórias. */
+.place-loreverse-link{display:flex;align-items:center;justify-content:space-between;gap:16px;align-self:start;padding:13px 15px;border:1px solid #cbcdc8;border-radius:3px;color:#3b403c;font-size:11px;letter-spacing:.025em;text-decoration:none;transition:background .2s,border-color .2s;line-height:1.45}
+.place-loreverse-link:hover:not(.is-unconfigured),.place-loreverse-link:focus-visible:not(.is-unconfigured){background:#e9ebe7;border-color:#898e88}
+.place-loreverse-link span:last-child{font-size:15px;flex:none}
+.place-loreverse-link.is-unconfigured{opacity:.48;cursor:default}
+@media(max-width:700px){.place-loreverse-link{width:100%;max-width:330px}}

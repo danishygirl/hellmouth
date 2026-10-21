@@ -204,3 +204,11 @@
     height:100%;
   }
 }
+
+/* V83 — simetria ajustada: mais largura para o texto, pôster intacto à direita. */
+@media(min-width:931px){
+ .episode-main-grid{grid-template-columns:minmax(0,2.25fr) minmax(325px,.9fr);gap:28px;}
+}
+.episode-tile-tba{cursor:default;min-height:143px;}
+.episode-tile-tba:hover{border-color:var(--episode-line);background:#fff;transform:none;}
+.episode-tile-tba h3{color:#999;}

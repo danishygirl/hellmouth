@@ -8,7 +8,7 @@ const places = [
   {
     "name": "Sunnyvale",
     "category": "CIDADE / CENTRO URBANO",
-    "image": "../assets/ambientacao/sunnyvale.svg",
+    "image": "../assets/ambientacao/sunnyvale.webp",
     "lead": "Entre ruas sombreadas, quase tudo parece normal.",
     "description": [
       "Fundada no fim do século XIX, Sunnyvale mantém a aparência de uma pequena cidade tradicional. Casas antigas, bairros arborizados e comerciantes conhecidos por todos dão à região uma sensação de familiaridade.",
@@ -16,29 +16,28 @@ const places = [
     ]
   },
   {
-    "name": "Reserva Ambiental de Sunnyvale",
-    "category": "NATUREZA / BOSQUE",
-    "image": "../assets/ambientacao/reserva.svg",
-    "lead": "Um refúgio verde onde nem todas as trilhas levam de volta.",
+    "name": "Ruas de Sunnyvale",
+    "category": "CIDADE / RUAS E COMÉRCIO",
+    "image": "../assets/ambientacao/ruas-sunnyvale.webp",
+    "lead": "O centro comercial e as ruas tradicionais de Sunnyvale.",
     "description": [
-      "A reserva reúne bosques densos, caminhos antigos e trechos de mata preservada. É frequentada por caminhantes durante o dia, mas a circulação costuma diminuir antes do anoitecer.",
-      "Entre árvores altas e clareiras pouco conhecidas, rumores sobre desaparecimentos e ruídos inexplicáveis alimentam a reputação do lugar."
+      "As ruas centrais de Sunnyvale reúnem lojas antigas, fachadas de tijolos, estabelecimentos familiares e calçadas arborizadas. A arquitetura conserva traços da Louisiana e da história local.",
+      "Descrição provisória — este texto será substituído quando forem enviadas as descrições definitivas dos ambientes."
     ]
   },
   {
-    "name": "Red Room Bar",
-    "category": "ESTABELECIMENTO / BAR",
-    "image": "../assets/ambientacao/redroom.svg",
-    "lead": "Um ponto de encontro para conversas que não cabem na luz do dia.",
+    "lead": "Descrição a definir.",
     "description": [
-      "Com iluminação baixa e mesas discretas, o Red Room é conhecido por atrair frequentadores muito diferentes entre si. Alguns procuram música e companhia; outros preferem preservar o anonimato.",
-      "O local costuma servir como território neutro para encontros tensos, negócios reservados e rumores que atravessam diferentes grupos da cidade."
-    ]
+      "Descrição pendente: conteúdo definitivo será inserido depois."
+    ],
+    "name": "Sunnyvale High",
+    "category": "INSTITUIÇÃO / ESCOLA",
+    "image": "../assets/ambientacao/sunnyvale-high.webp"
   },
   {
     "name": "Departamento Policial",
     "category": "INSTITUIÇÃO / SEGURANÇA",
-    "image": "../assets/ambientacao/policia.svg",
+    "image": "../assets/ambientacao/departamento-policial.webp",
     "lead": "Na cidade, algumas ocorrências parecem desaparecer dos arquivos.",
     "description": [
       "O departamento reúne os agentes responsáveis pela segurança pública de Sunnyvale. Suas salas, arquivos e corredores concentram relatos de acontecimentos que nem sempre encontram explicação convincente.",
@@ -46,19 +45,46 @@ const places = [
     ]
   },
   {
-    "name": "Manor Hall — Academia de Artes",
-    "category": "INSTITUIÇÃO / EDUCAÇÃO",
-    "image": "../assets/ambientacao/manor.svg",
-    "lead": "Por trás das paredes elegantes, toda obra guarda uma história.",
+    "lead": "Descrição a definir.",
     "description": [
-      "A Manor Hall oferece aulas, apresentações e exposições em um edifício de arquitetura marcante. Seus salões e ateliês são frequentados por estudantes e artistas de diferentes origens.",
-      "A instituição é cenário para rivalidades, amizades e descobertas, além de guardar arquivos sobre antigos benfeitores e obras de procedência incerta."
+      "Descrição pendente: conteúdo definitivo será inserido depois."
+    ],
+    "name": "Distrito Comercial",
+    "category": "CIDADE / COMÉRCIO",
+    "image": "../assets/ambientacao/distrito-comercial.webp"
+  },
+  {
+    "lead": "Descrição a definir.",
+    "description": [
+      "Descrição pendente: conteúdo definitivo será inserido depois."
+    ],
+    "name": "Residencial Tree Hills",
+    "category": "CIDADE / RESIDENCIAL",
+    "image": "../assets/ambientacao/residencial-tree-hills.webp"
+  },
+  {
+    "name": "Reserva Ambiental",
+    "category": "NATUREZA / RESERVA",
+    "image": "../assets/ambientacao/reserva-ambiental.webp",
+    "lead": "Um refúgio verde onde nem todas as trilhas levam de volta.",
+    "description": [
+      "A reserva reúne bosques densos, caminhos antigos e trechos de mata preservada. É frequentada por caminhantes durante o dia, mas a circulação costuma diminuir antes do anoitecer.",
+      "Entre árvores altas e clareiras pouco conhecidas, rumores sobre desaparecimentos e ruídos inexplicáveis alimentam a reputação do lugar."
     ]
+  },
+  {
+    "lead": "Descrição a definir.",
+    "description": [
+      "Descrição pendente: conteúdo definitivo será inserido depois."
+    ],
+    "name": "Moonlight Diner",
+    "category": "ESTABELECIMENTO / RESTAURANTE",
+    "image": "../assets/ambientacao/moonlight-diner.webp"
   },
   {
     "name": "Docks Night Club",
     "category": "ESTABELECIMENTO / VIDA NOTURNA",
-    "image": "../assets/ambientacao/docks.svg",
+    "image": "../assets/ambientacao/docks-night-club.webp",
     "lead": "Quando a música aumenta, a cidade revela outra face.",
     "description": [
       "O Docks é um dos principais pontos da vida noturna local, conhecido por festas, música e encontros que avançam até a madrugada.",
@@ -66,13 +92,31 @@ const places = [
     ]
   },
   {
-    "name": "Cemitério de Saint Hollow",
-    "category": "LOCAL HISTÓRICO / CEMITÉRIO",
-    "image": "../assets/ambientacao/cemiterio.svg",
-    "lead": "Alguns nomes permanecem mesmo quando suas histórias são esquecidas.",
+    "name": "Red Room Bar",
+    "category": "ESTABELECIMENTO / BAR",
+    "image": "../assets/ambientacao/red-room-bar.webp",
+    "lead": "Um ponto de encontro para conversas que não cabem na luz do dia.",
     "description": [
-      "Lápides antigas, mausoléus e caminhos cercados por árvores compõem um dos espaços mais silenciosos da região. O cemitério conserva parte importante da memória das famílias fundadoras.",
-      "Entre inscrições desgastadas e setores pouco visitados, o lugar atrai investigadores, curiosos e aqueles que acreditam que o passado ainda não descansou."
+      "Com iluminação baixa e mesas discretas, o Red Room é conhecido por atrair frequentadores muito diferentes entre si. Alguns procuram música e companhia; outros preferem preservar o anonimato.",
+      "O local costuma servir como território neutro para encontros tensos, negócios reservados e rumores que atravessam diferentes grupos da cidade."
+    ]
+  },
+  {
+    "name": "Academia de Artes Manor Hall",
+    "category": "INSTITUIÇÃO / EDUCAÇÃO",
+    "image": "../assets/ambientacao/manor-hall.webp",
+    "lead": "Uma academia de artes que guarda segredos além do palco.",
+    "description": [
+      "Descrição pendente: conteúdo definitivo será inserido depois."
+    ]
+  },
+  {
+    "name": "Sunnyvale Memorial Garden",
+    "category": "LOCAL HISTÓRICO / CEMITÉRIO",
+    "image": "../assets/ambientacao/sunnyvale-memorial-garden.webp",
+    "lead": "Histórias antigas permanecem entre os mausoléus e jardins.",
+    "description": [
+      "Descrição pendente: conteúdo definitivo será inserido depois."
     ]
   }
 ];

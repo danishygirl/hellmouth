@@ -10,3 +10,7 @@
    Intensidade editável via saturate(). */
 :root { --season-art: url('season-one-poster.webp'); }
 .season-hero { filter: saturate(.54) contrast(.96) brightness(1.04); }
+
+/* V74 — título do episódio em destaque e identificação menor logo abaixo */
+.season-description .season-episode-number {display:block;margin-top:13px;font-size:11px;letter-spacing:.16em;font-weight:600;color:#85878a;}
+.season-description h1 {line-height:1.12;letter-spacing:-.035em;}

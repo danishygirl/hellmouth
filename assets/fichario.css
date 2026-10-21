@@ -176,3 +176,7 @@
 .character-badge--clan{min-width:145px;max-width:238px;padding-inline:15px}
 .character-badge--clan .symbol{flex:0 0 20px;width:20px;height:22px;margin:0;display:grid;place-items:center;background:transparent;border-radius:0;line-height:1}
 .character-badge--clan .badge-image{display:block;width:19px;height:19px;object-fit:contain;filter:none}
+
+/* V54: único título da biografia, alinhado à direita em todas as fichas */
+.sheet-section-heading{justify-content:flex-end;text-align:right}
+.sheet-section-heading #sheet-story-title{margin-left:auto}

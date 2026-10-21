@@ -125,3 +125,8 @@ a { color:inherit; text-decoration:none; }
   .editorial-description { margin-top:19px; }
   .editorial-description p { font-size:11px; }
 }
+
+/* V55 - imagem editavel do card Episodios */
+.poster-episodes .poster-art.poster-art-episodios{background:#e8e7e5;}
+.poster-art-episodios img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.16) saturate(.65);transition:transform .4s ease;}
+.poster-episodes:hover .poster-art-episodios img,.poster-episodes:focus-visible .poster-art-episodios img{transform:scale(1.045);}

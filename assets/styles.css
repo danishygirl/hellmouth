@@ -130,3 +130,24 @@ a { color:inherit; text-decoration:none; }
 .poster-episodes .poster-art.poster-art-episodios{background:#e8e7e5;}
 .poster-art-episodios img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.16) saturate(.65);transition:transform .4s ease;}
 .poster-episodes:hover .poster-art-episodios img,.poster-episodes:focus-visible .poster-art-episodios img{transform:scale(1.045);}
+
+/* V56 — Card Fichário ilustrado, mesmo enquadramento de Episódios */
+.poster-files .poster-art.poster-art-fichario{background:#e8e7e5;}
+.poster-art-fichario img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s ease;}
+.poster-files:hover .poster-art-fichario img,.poster-files:focus-visible .poster-art-fichario img{transform:scale(1.045);}
+
+
+/* V57 — Card Classes ilustrado em tons dessaturados */
+.poster-classes .poster-art.poster-art-classes{background:#e8e7e5;}
+.poster-art-classes img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.12) saturate(.62) brightness(.98);transition:transform .4s ease;}
+.poster-classes:hover .poster-art-classes img,.poster-classes:focus-visible .poster-art-classes img{transform:scale(1.045);}
+
+/* V58 — Card Clãs em WebP dessaturado; mesmo enquadramento dos demais. */
+.poster-clans .poster-art.poster-art-clas{background:#e8e7e5;}
+.poster-art-clas img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s ease;}
+.poster-clans:hover .poster-art-clas img,.poster-clans:focus-visible .poster-art-clas img{transform:scale(1.045);}
+
+/* V59 — Ambientação: mesmo tratamento claro e dessaturado dos cards */
+.poster-world .poster-art.poster-art-ambientacao{background:#e8e7e5;}
+.poster-art-ambientacao img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.18) saturate(.55) brightness(1.04);transition:transform .4s ease;}
+.poster-world:hover .poster-art-ambientacao img,.poster-world:focus-visible .poster-art-ambientacao img{transform:scale(1.045);}

@@ -43,8 +43,11 @@ const characters = [
     portrait: '../assets/characters/christian-thorne.webp',
     profileUrl: '', // URL do Loreverse, caso haja
     story: [
-      'Christian Thorne é o líder da igreja “Irmandade do Sol”, uma congregação que atua frequentemente como associação filantrópica em Sunnyvale. A Irmandade do Sol, comandada por Thorne, é responsável por eventos na cidade durante todo o ano.',
-      'Christian é conhecido por seu temperamento extremista e suas ideologias políticas conservadoras. Por isso, lidera o grupo de civis que persegue e não tolera as criaturas sobrenaturais da cidade, principalmente os vampiros.'
+      "Christian Thorne não é apenas um pregador; ele é a espinha dorsal comunitária de Sunnyvale. Fundador e líder supremo da Irmandade do Sol, Thorne construiu um império de caridade e devoção. Sob seu comando, a congregação gerencia os principais eventos da cidade ao longo do ano — desde festivais de colheita e arrecadações de alimentos até creches comunitárias e abrigos para os necessitados.",
+      "Para o cidadão comum, Thorne é um homem santo, um pilar de moralidade e generosidade que preenche as lacunas deixadas pelo governo local. Sua voz mansa no púlpito atrai tanto os trabalhadores humildes quanto a elite conservadora de Sunnyvale, garantindo à Irmandade do Sol uma influência política e financeira massiva.",
+      "Por trás dos sorrisos benevolentes, reside um homem de temperamento extremista e ideologias profundamente radicais. Christian enxerga o mundo em uma dualidade absoluta: a luz purificadora do sol contra as trevas corruptoras. Ele usa sua retórica inflamada para alimentar o medo e o preconceito da população, moldando uma agenda política conservadora que clama pelo “retorno à pureza tradicional” de Sunnyvale.",
+      "Esse fanatismo se traduz em uma milícia civil clandestina. Thorne lidera um grupo de fanáticos armados que vigia a cidade durante a noite, caçando ativamente qualquer criatura sobrenatural que ouse cruzar os limites do município. Seu ódio principal é direcionado aos vampiros, seres que ele considera a personificação máxima do pecado e da heresia, pois distorcem o milagre da vida e queimam sob a luz do deus que ele prega.",
+      "Thorne não se vê como um vilão; ele se enxerga como o herói messiânico de que Sunnyvale precisa para ser salva da condenação eterna. Isso o torna um oponente extremamente perigoso para os sobrenaturais, pois sua arma mais forte é a fé cega de seus seguidores e a influência legal que ele exerce sobre as autoridades locais."
     ],
     items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
   },
@@ -64,8 +67,11 @@ const characters = [
     portrait: '../assets/characters/sydra-windsor.webp',
     profileUrl: '', // URL do Loreverse, caso haja
     story: [
-      'Sydra Windsor é a diretora da Academia de Artes Manor\'s Hall. A mulher está na direção da academia há quase dez anos e lidera o instituto com unhas e dentes, marcada por uma personalidade ríspida e uma aparência intimidadora.',
-      'A bruxa faz parte da classe alta de Sunnyvale, escondendo não só a si mesma, como também o corpo discente da escola para bruxas e feiticeiros há anos.'
+      "Para a elite de Sunnyvale, Sydra Windsor é sinônimo de prestígio, disciplina e alta cultura. Há quase uma década, ela comanda a Academia de Artes Manor's Hall, o instituto educacional mais exclusivo e tradicional da região. Sob sua liderança implacável, a escola se tornou o destino dos filhos das famílias mais ricas da cidade.",
+      "Sydra é uma mulher de personalidade ríspida, postura impecável e aparência profundamente intimidadora. Seus olhos parecem ler a alma de quem cruza seu caminho, e ela não tolera falhas, atrasos ou mediocridade. Ela transita pelas festas da alta sociedade de Sunnyvale com a elegância de uma rainha, usando sua influência política e financeira para garantir que a Manor's Hall permaneça intocável e longe de investigações externas.",
+      "Por trás dos portões da mansão e das cortinas de veludo das salas de teatro, esconde-se a verdadeira natureza do lugar: Manor's Hall é, na verdade, um santuário e uma escola oculta para jovens bruxas e feiticeiros. Sydra usa a fachada artística e o isolamento dos alunos internos para camuflar o ensino das artes arcanas, poções e rituais sobrenaturais.",
+      "Mais do que uma educadora, Sydra protege seu corpo discente com unhas e dentes, como uma loba protege seus filhotes. Windsor sabe que o menor deslize ou manifestação mágica descontrolada pode atrair os olhares errados, destruindo o refúgio seguro que levou anos para construir.",
+      "Sydra Windsor é uma aliada valiosa, mas uma inimiga aterrorizante. Ela não hesitará em usar feitiços de manipulação mental, maldições ou sua influência na alta sociedade para destruir qualquer um que ameace expor as bruxas de sua escola e colocá-las em perigo."
     ],
     items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
   },

@@ -12,8 +12,7 @@ const places = [
     "image": "../assets/ambientacao/sunnyvale.webp",
     "lead": "Entre ruas sombreadas, quase tudo parece normal.",
     "description": [
-      "Fundada no fim do século XIX, Sunnyvale mantém a aparência de uma pequena cidade tradicional. Casas antigas, bairros arborizados e comerciantes conhecidos por todos dão à região uma sensação de familiaridade.",
-      "A tranquilidade, no entanto, é apenas uma parte de sua história. À medida que a noite cai, o cotidiano se aproxima de acontecimentos que seus habitantes aprenderam a não discutir."
+      "Uma rodovia de duas faixas corta uma densa floresta de pinheiros, palmeiras e carvalhos cobertos por musgo, sob um céu aberto e brilhante. À margem da estrada, uma antiga placa de madeira desgastada dá as boas-vindas à cidade. Postes de madeira conduzem a fiação elétrica em direção ao perímetro urbano, caracterizado por comércios locais, ruas residenciais com casas de madeira e o calor do sul da Louisiana. A cidade é fortemente iluminada pelo sol escaldante, que gera um calor denso e constante durante o dia. Essa claridade tropical confere ao lugar um aspecto pacato e tipicamente interiorano, enquanto a vegetação fechada e o mormaço criam uma barreira de isolamento em relação ao restante do mundo. Ao anoitecer, o calor abafado permanece, mas, durante o inverno, poças d’água refletem a luz nas estradas de barro que separam as casas mais isoladas da cidade."
     ]
   },
   {
@@ -23,14 +22,13 @@ const places = [
     "image": "../assets/ambientacao/ruas-sunnyvale.webp",
     "lead": "O centro comercial e as ruas tradicionais de Sunnyvale.",
     "description": [
-      "As ruas centrais de Sunnyvale reúnem lojas antigas, fachadas de tijolos, estabelecimentos familiares e calçadas arborizadas. A arquitetura conserva traços da Louisiana e da história local.",
-      "Descrição provisória — este texto será substituído quando forem enviadas as descrições definitivas dos ambientes."
+      "Uma avenida principal de asfalto é ladeada por calçadas largas de tijolos e edifícios pequenos com sacadas de ferro. Placas de madeira preta com letras douradas identificam o comércio local, incluindo lojas de antiguidades e livrarias, sob bandeiras americanas pendentes. Carros clássicos e picapes dividem as vagas ao longo da via, pontuada por árvores floridas, postes de luz coloniais e a silhueta de uma torre de igreja ao fundo. A luz do dia ilumina diretamente as fachadas históricas, reforçando a atmosfera convidativa de uma comunidade tradicional do interior da Louisiana. O mormaço diurno mantém o movimento lento e a rotina comercial desacelerada ao longo da avenida."
     ]
   },
   {
     "lead": "Descrição a definir.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Um complexo imponente de tijolos vermelhos escuros e arquitetura robusta, cercado por uma densa floresta de pinheiros altos. O asfalto irregular do estacionamento é marcado por poças d’água que refletem a luz e por carros antigos dos estudantes durante a temporada de chuvas. O local transita entre a normalidade de uma escola pública e o isolamento sombrio provocado pelas árvores que cercam o horizonte. À medida que o sol se põe, o bosque projeta sombras longas e distorcidas sobre a fachada, dando ao prédio o aspecto de uma fortaleza isolada."
     ],
     "name": "Sunnyvale High",
     "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
@@ -44,14 +42,13 @@ const places = [
     "image": "../assets/ambientacao/departamento-policial.webp",
     "lead": "Na cidade, algumas ocorrências parecem desaparecer dos arquivos.",
     "description": [
-      "O departamento reúne os agentes responsáveis pela segurança pública de Sunnyvale. Suas salas, arquivos e corredores concentram relatos de acontecimentos que nem sempre encontram explicação convincente.",
-      "Enquanto parte da equipe insiste em interpretações convencionais, antigos registros sugerem que alguns padrões se repetem há décadas."
+      "Uma repartição pública de tijolos vermelhos e concreto claro, com um letreiro institucional cinza na entrada. Postes decorativos e árvores pequenas preenchem o pátio, onde um mastro alto sustenta a bandeira dos Estados Unidos. O estacionamento de asfalto abriga viaturas de patrulha pretas e brancas e caminhonetes utilitárias da força policial local. A calmaria externa transmite a impressão de uma delegacia pacata de cidade pequena, cuja atividade principal parece se resumir a relatórios burocráticos e ao arquivamento de queixas menores. As janelas retangulares barram a claridade com persianas escuras, criando pontos cegos para o interior das salas de triagem e mantendo isolada a área interna de carceragem."
     ]
   },
   {
     "lead": "Descrição a definir.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Calçadas charmosas de paralelepípedos, ladeadas por lojas de fachadas clássicas e letreiros, compõem o distrito. Árvores cobertas por musgo pendente se estendem sobre a rua, bloqueando parte da luz. A fileira de comércios locais, como livrarias e lojas vintage, transmite o ar pacato de uma cidade pequena, mas rapidamente se torna solitária e suspeita quando o movimento diminui. Os recantos das vitrines escuras e os toldos das lojas criam pontos cegos constantes ao longo das calçadas, perfeitos para a movimentação discreta dos moradores."
     ],
     "name": "Distrito Comercial",
     "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
@@ -61,7 +58,7 @@ const places = [
   {
     "lead": "Descrição a definir.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Um bairro suburbano tipicamente americano, com casas de madeira de um ou dois andares, varandas frontais e cercas brancas baixas. À noite, a rua de asfalto escuro é fracamente iluminada por postes espaçados, deixando grandes vãos de escuridão entre as propriedades e as árvores frondosas. A quietude extrema e a falta de movimento nas calçadas geram uma falsa sensação de segurança, em que cada janela acesa parece observar quem passa pela rua."
     ],
     "name": "Residencial Tree Hills",
     "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
@@ -75,14 +72,13 @@ const places = [
     "image": "../assets/ambientacao/reserva-ambiental.webp",
     "lead": "Um refúgio verde onde nem todas as trilhas levam de volta.",
     "description": [
-      "A reserva reúne bosques densos, caminhos antigos e trechos de mata preservada. É frequentada por caminhantes durante o dia, mas a circulação costuma diminuir antes do anoitecer.",
-      "Entre árvores altas e clareiras pouco conhecidas, rumores sobre desaparecimentos e ruídos inexplicáveis alimentam a reputação do lugar."
+      "Um rio de águas calmas e escuras corta uma floresta densa e fechada. Na margem lamacenta, destacam-se um pequeno trapiche de madeira envelhecida e uma torre de observação rústica suspensa entre as árvores. A calmaria da água e a vastidão da mata dão a impressão de um lugar intocado, mas a vegetação fechada torna o ambiente um pouco claustrofóbico. As copas volumosas das árvores bloqueiam quase toda a luz do entardecer, cobrindo o chão da floresta e as margens do rio com a escuridão da noite."
     ]
   },
   {
     "lead": "Descrição a definir.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Um estabelecimento rústico com acabamento em madeira escura, mesas redondas e cabines estofadas em couro vermelho. Uma mesa de bilhar com feltro verde domina o primeiro plano, iluminada por uma luminária antiga de vidro decorado. O clima de bar de beira de estrada, típico de uma cidade pequena, serve como cobertura perfeita para encontros clandestinos e faz parte da rotina dos moradores de Sunnyvale."
     ],
     "name": "Moonlight Diner",
     "loreverseUrl": "", // COLE AQUI o link do tópico deste ambiente no Loreverse
@@ -96,8 +92,7 @@ const places = [
     "image": "../assets/ambientacao/docks-night-club.webp",
     "lead": "Quando a música aumenta, a cidade revela outra face.",
     "description": [
-      "O Docks é um dos principais pontos da vida noturna local, conhecido por festas, música e encontros que avançam até a madrugada.",
-      "Seu movimento intenso contrasta com áreas silenciosas ao redor, fazendo do clube um cenário natural para celebrações, confrontos e alianças inesperadas."
+      "Um clube underground com paredes pretas totalmente cobertas por pôsteres de bandas, adesivos e pichações. No centro, uma pista de dança de concreto desgastado leva a um pequeno palco. À direita, balcões de madeira com banquetas de couro vermelho e metal cromado dividem o espaço. O lugar é famoso por receber shows ao vivo de bandas de garagem, atraindo multidões barulhentas e servindo como o reduto perfeito para os jovens da cidade se misturarem."
     ]
   },
   {
@@ -107,8 +102,7 @@ const places = [
     "image": "../assets/ambientacao/red-room-bar.webp",
     "lead": "Um ponto de encontro para conversas que não cabem na luz do dia.",
     "description": [
-      "Com iluminação baixa e mesas discretas, o Red Room é conhecido por atrair frequentadores muito diferentes entre si. Alguns procuram música e companhia; outros preferem preservar o anonimato.",
-      "O local costuma servir como território neutro para encontros tensos, negócios reservados e rumores que atravessam diferentes grupos da cidade."
+      "Um salão gótico de proporções imensas, dominado por tons de vermelho-sangue e carmesim. O espaço é preenchido por grandes sofás curvos de veludo, tapetes ornamentais e mesas baixas. Ao fundo, acima de uma estrutura de colunas imponentes, ergue-se uma grande estátua de uma figura montada em um animal. À esquerda, um balcão extenso exibe prateleiras repletas de garrafas de vidro. A arquitetura clássica, com painéis de madeira escura e tetos altos com passarelas de metal, cria a atmosfera de uma área VIP de boate noturna no segundo andar. O local funciona oficialmente como o ambiente de reunião e corte da Camarilla, onde as leis da Máscara são discutidas e a hierarquia vampírica é rigidamente mantida em total segredo."
     ]
   },
   {
@@ -118,7 +112,7 @@ const places = [
     "image": "../assets/ambientacao/manor-hall.webp",
     "lead": "Uma academia de artes que guarda segredos além do palco.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Um imponente casarão de arquitetura clássica da Louisiana, com fachadas de colunas brancas e grandes varandas externas protegidas por grades de ferro trabalhado. No andar térreo, destaca-se um salão neoclássico com colunas coríntias, tetos altos com molduras de gesso, pisos de madeira clara e grandes lustres de cristal. O espaço é decorado com sofás de época, uma lareira de mármore entalhada e paredes repletas de retratos antigos. No segundo andar, corredores longos de assoalho conectam os dormitórios, que contam com camas de ferro forjado, dosséis e janelas francesas de acesso à varanda."
     ]
   },
   {
@@ -128,7 +122,7 @@ const places = [
     "image": "../assets/ambientacao/sunnyvale-memorial-garden.webp",
     "lead": "Histórias antigas permanecem entre os mausoléus e jardins.",
     "description": [
-      "Descrição pendente: conteúdo definitivo será inserido depois."
+      "Um cemitério antigo composto por fileiras irregulares de lápides de mármore cinzento, cruzes de pedra e mausoléus em estilo gótico. Caminhos de terra e folhas caídas separam os setores do gramado escuro. Poucos postes de luz coloniais estão distribuídos pelo terreno, emitindo uma iluminação pálida que alcança apenas as quadras principais e os troncos de árvores altas. A disposição espaçada das sepulturas e a arquitetura desgastada das capelas familiares dão ao local um aspecto de abandono e isolamento geográfico do restante da cidade."
     ]
   }
 ];

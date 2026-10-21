@@ -1,0 +1,11 @@
+HELLMOUTH — COMO EDITAR AMBIENTAÇÕES NO GITHUB
+
+1. Abra assets/ambientacao-locais.js.
+2. Cada bloco { ... } representa um local e aparece na ordem do arquivo.
+3. Para trocar o destino do botão: altere apenas o valor entre aspas de "loreverseUrl".
+4. Para adicionar novo local: copie um bloco completo, coloque depois do último (separado por vírgula), e edite name, category, image, description e loreverseUrl.
+5. Envie a fotografia em WebP para assets/ambientacao e use image: "../assets/ambientacao/nome.webp".
+6. Clique Commit changes e espere o Cloudflare Pages concluir o novo deploy.
+7. Não altere assets/ambientacao.js, que contém somente a lógica dos botões e janelas.
+
+O endereço da página Sunnyvale aponta para /universos/hellmouth, conforme o link fornecido.

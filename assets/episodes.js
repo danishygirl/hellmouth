@@ -6,7 +6,7 @@ const sharedScenes = [
  {title:'RESERVA AMBIENTAL', image:'../assets/scenes/sunnyvale.svg', url:'../pages/ambientacao.html#reserva'}
 ];
 const episodes = [
- {id:'s1e1',number:'S1E1',title:'Welcome to Sunnyvale',summary:'Uma nova chegada transforma a rotina da cidade, enquanto rumores sobre a floresta começam a circular entre seus moradores.',image:'../assets/scenes/welcome-to-sunnyvale-wide.webp',quote:'Welcome to Sunnyvale',cast:'Emma Roberts, Evan Peters, Jessica L., Ryan Murphy, Hope Lake',body:[
+ {id:'s1e1',number:'S1E1',title:'Welcome to Sunnyvale',summary:'Uma nova chegada transforma a rotina da cidade, enquanto rumores sobre a floresta começam a circular entre seus moradores.',image:'../assets/scenes/episodio-01-welcome-to-sunnyvale-poster.webp',quote:'Welcome to Sunnyvale',cast:'Emma Roberts, Evan Peters, Jessica L., Ryan Murphy, Hope Lake',body:[
  'Sob grandes montanhas e cachoeiras, esconde-se a arborizada Sunnyvale, uma cidade no sul dos Estados Unidos que parece ter sido feita sob medida. Suas ruas sombreadas e seus bosques guardam tradições que passam de geração em geração.',
  'Na primeira noite, algo se move entre as árvores da reserva ambiental. Alguns moradores juram ter ouvido vozes além da antiga estrada, onde a cidade termina e a floresta começa.',
  'As histórias parecem impossíveis até que sinais estranhos surgem pela manhã. Uma ligação inesperada reúne pessoas que jamais teriam escolhido se encontrar.',

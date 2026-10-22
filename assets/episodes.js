@@ -1,6 +1,6 @@
 /* HELLMOUTH — CONTEÚDO EDITÁVEL: adicione episódios copiando um objeto abaixo.
    scene.url deve ser uma página existente ou link externo. scene.image aponta para imagem/GIF. */
-<br> <br> const sharedScenes = [
+ const sharedScenes = [
  {title:'IGREJA DE SUNNYVALE', image:'../assets/scenes/church.svg', url:'../pages/ambientacao.html#igreja'},
  {title:'SUNNYVALE MOTEL', image:'../assets/scenes/motel.svg', url:'../pages/ambientacao.html#motel'},
  {title:'RESERVA AMBIENTAL', image:'../assets/scenes/sunnyvale.svg', url:'../pages/ambientacao.html#reserva'}

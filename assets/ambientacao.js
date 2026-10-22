@@ -54,7 +54,7 @@ const communityTopics = [
   { name: 'Inscrições', description: 'Cadastro de personagens', url: 'https://loreverse.world/topicos/2061' },
   { name: 'Chat', description: 'Interações narrativas', url: 'https://loreverse.world/topicos/2060' },
   { name: 'Regras', description: 'Normas e convivência', url: 'https://loreverse.world/universos/hellmouth#panel-regras' },
-  { name: 'Telegram', description: 'Chat interativo', url: '#' },
+  { name: 'Telegram', description: 'Chat interativo', url: 'https://t.me/+Aaa8ZwcuCnpkZmUx' },
   { name: 'Discord', description: 'Chat interativo', url: '#' },
   { name: 'SAC', description: 'Contate a moderação', url: 'https://loreverse.world/@slaughter' }
 ];

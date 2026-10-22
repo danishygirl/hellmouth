@@ -17,19 +17,15 @@
 
   <nav class="hm-page-nav" aria-label="Navegação entre páginas"></nav>
 <main>
-    <section class="files-intro">
-      <div>
-        <span class="files-eyebrow">FILES / ARCHIVE</span>
-       
-      <div class="files-intro-aside">
-        <span>HELLMOUTH / SUNNYVALE</span>
- 
-      </div>
+    <section class="files-intro" aria-label="Identificação do arquivo">
+      <span class="files-eyebrow">FILES / ARCHIVE</span>
+      <span class="files-intro-aside">HELLMOUTH / SUNNYVALE</span>
     </section>
 
-    <section class="files-index" aria-labelledby="index-title">
+    <section class="files-index" aria-labelledby="files-index-heading">
+      <h1 id="files-index-heading" class="sr-only">Fichário de personagens</h1>
       <div class="files-toolbar">
-      
+        <div class="files-filters" id="files-filters" role="group" aria-label="Filtrar personagens por classe"></div>
         <div class="files-search-block">
           <label class="files-search">
             <span class="sr-only">Pesquisar nome, jogador, classe ou clã</span>
@@ -41,7 +37,6 @@
         </div>
       </div>
 
-      <div class="files-filters" id="files-filters" role="group" aria-label="Filtrar personagens por classe"></div>
       <div id="files-groups" class="files-groups"></div>
       <p id="files-empty" class="files-empty" hidden>Nenhum personagem encontrado. Tente outro nome, classe ou clã.</p>
     </section>

@@ -50,14 +50,13 @@ render();
 /* V15 — LINKS DA COMUNIDADE. Substitua url: '#' pelo link exato de cada tópico no Loreverse.
    Adicione/remova objetos para personalizar o menu. */
 const communityTopics = [
-  { name: 'Sobre a Comunidade', description: 'Apresentação e história do RPG', url: '#' },
-  { name: 'Regras', description: 'Normas e convivência', url: '#' },
-  { name: 'Inscrições', description: 'Cadastro de personagens', url: '#' },
-  { name: 'Fichas de Personagens', description: 'Registro dos habitantes', url: '#' },
-  { name: 'Classes e Raças', description: 'Características sobrenaturais', url: '#' },
-  { name: 'Clãs', description: 'Linhagens e sociedades', url: '#' },
-  { name: 'Ambientações', description: 'Tópicos para cenas na cidade', url: '#' },
-  { name: 'Pedidos e Dúvidas', description: 'Suporte aos jogadores', url: '#' }
+  
+  { name: 'Inscrições', description: 'Cadastro de personagens', url: 'https://loreverse.world/topicos/2061' },
+  { name: 'Chat', description: 'Interações narrativas', url: 'https://loreverse.world/topicos/2060' },
+  { name: 'Regras', description: 'Regras gerais e conduta', url: 'https://loreverse.world/universos/hellmouth#panel-regras' },
+  { name: 'Telegram', description: 'Chat interativo', url: '#' },
+  { name: 'Discord', description: 'Chat interativo', url: '#' },
+  { name: 'SAC', description: 'Contate a moderação', url: 'https://loreverse.world/@slaughter' }
 ];
 const chainIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13.5a4.5 4.5 0 0 0 6.5.2l2.7-2.7a4.5 4.5 0 0 0-6.4-6.4l-1.55 1.55"/><path d="M14 10.5a4.5 4.5 0 0 0-6.5-.2l-2.7 2.7a4.5 4.5 0 0 0 6.4 6.4l1.55-1.55"/></svg>';
 const navLinks=$('community-links');

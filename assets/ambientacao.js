@@ -55,7 +55,7 @@ const communityTopics = [
   { name: 'Chat', description: 'Interações narrativas', url: 'https://loreverse.world/topicos/2060' },
   { name: 'Regras', description: 'Normas e convivência', url: 'https://loreverse.world/universos/hellmouth#panel-regras' },
   { name: 'Telegram', description: 'Chat interativo', url: 'https://t.me/+Aaa8ZwcuCnpkZmUx' },
-  { name: 'Discord', description: 'Chat interativo', url: '#' },
+  { name: 'Discord', description: 'Chat interativo', url: 'https://discord.gg/VwYUHVMrAX' },
   { name: 'SAC', description: 'Contate a moderação', url: 'https://loreverse.world/@slaughter' }
 ];
 const chainIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13.5a4.5 4.5 0 0 0 6.5.2l2.7-2.7a4.5 4.5 0 0 0-6.4-6.4l-1.55 1.55"/><path d="M14 10.5a4.5 4.5 0 0 0-6.5-.2l-2.7 2.7a4.5 4.5 0 0 0 6.4 6.4l1.55-1.55"/></svg>';

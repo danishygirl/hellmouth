@@ -1,25 +1,61 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f5f3"><title>Episódios — HELLMOUTH</title><link rel="stylesheet" href="../assets/styles.css"><link rel="stylesheet" href="../assets/episodes.css"><link rel="stylesheet" href="../assets/nav.css"></head>
-<body><div class="page-shell episodes-page" id="top">
-<header class="masthead"><a class="wordmark" href="../index.html">HELLMOUTH<span class="wordmark-point">.</span></a><span class="masthead-right">EPISODES / SEASON 01</span></header>
-<nav class="hm-page-nav" aria-label="Navegação entre páginas"></nav>
-<main>
-  <!-- TEMPORADA: edite título, descrição e URL da imagem em episodes.css --season-art -->
-  <section class="season-intro" aria-labelledby="season-title">
-    <div class="season-header"><span class="eyebrow">01 / CHAPTERS</span><span class="season-breadcrumb">HELLMOUTH / SUNNYVALE / LOUISIANA</span></div>
-    <div class="season-hero" role="img" aria-label="Imagem da primeira temporada"><span class="season-hero-label">HELLMOUTH <span>—</span> SEASON ONE</span></div>
-    <div class="season-description"><div><span class="eyebrow">PRIMEIRA TEMPORADA</span><h1 id="season-title">Welcome to Sunnyvale<span class="period">.</span></h1><span class="season-episode-number">EPISÓDIO 1</span></div><p>Sunnyvale é amplamente conhecida como a boca do inferno na Terra, um lugar onde a linha que separa o mundo real do sobrenatural é praticamente invisível, tornando a cidade um refúgio para criaturas sobrenaturais.</p></div>
-  </section>
-  <section class="chapter-list" aria-labelledby="episodes-heading"><div class="chapters-topline"><div><span class="eyebrow">02 / EPISODES</span><h2 id="episodes-heading">Os episódios</h2></div><span class="chapters-hint">SELECIONE UM EPISÓDIO PARA EXPLORAR ↗</span></div><div class="chapter-grid" id="episode-list"></div><p class="no-results" id="list-empty" hidden>Nenhum episódio encontrado.</p></section>
-</main><footer class="site-footer"><span>© HELLMOUTH</span></footer>
-</div>
-<!-- VISUALIZAÇÃO FULL PAGE, SEM BLUR: conteúdo gerado em assets/episodes.js -->
-<div id="episode-view" class="episode-view" hidden aria-hidden="true"><div class="episode-view-shell">
-  <header class="episode-topbar"><button type="button" class="quiet-button" id="episode-back">← VOLTAR AOS EPISÓDIOS</button><span>HELLMOUTH <b>SEASON ONE</b></span><button type="button" class="quiet-button" id="episode-next">PRÓXIMO EPISÓDIO →</button></header>
-  <div class="episode-meta"><div class="episode-meta-title"><span class="eyebrow" id="view-code">S1E1</span><h2 id="view-title">Título</h2></div><form id="episode-search-form" role="search"><label class="sr-only" for="episode-search">Buscar palavras no episódio</label><input id="episode-search" type="search" placeholder="Search..." autocomplete="off"><button type="button" id="clear-search" aria-label="Limpar busca">×</button><span id="search-count" aria-live="polite"></span></form></div>
-  <div class="episode-main-grid"><article class="episode-story" id="episode-story" tabindex="0" aria-label="Texto do episódio com rolagem"></article><aside class="episode-sidebar"><div class="episode-side-image"><img id="episode-side-img" src="../assets/scenes/episodio-01-welcome-to-sunnyvale-poster.webp" alt="Pôster do episódio Welcome to Sunnyvale"></div></aside></div>
-<div class="scenes-title"><span>CENAS</span></div>
-  <nav class="scene-grid" id="episode-scenes" aria-label="Cenas e ambientações"></nav>
-  <footer class="episode-view-footer"><span>HELLMOUTH (C) </span><button class="quiet-button" type="button" id="episode-close-bottom">← RETORNAR</button></footer>
-</div></div>
-<script src="../assets/episodes.js"></script><script src="../assets/nav.js"></script></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <title>Episódios — HELLMOUTH</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/episodes.css">
+  <link rel="stylesheet" href="../assets/nav.css">
+</head>
+<body>
+  <div class="page-shell episodes-page" id="top">
+    <header class="masthead">
+      <a class="wordmark" href="../index.html">HELLMOUTH<span class="wordmark-point">.</span></a>
+      <span class="masthead-right">EPISODES / SEASON 01</span>
+    </header>
+
+    <nav class="hm-page-nav" aria-label="Navegação entre páginas"></nav>
+
+    <main>
+      <section class="season-intro" aria-labelledby="season-title">
+        <div class="season-header">
+          <span class="eyebrow">01 / CHAPTERS</span>
+          <span class="season-breadcrumb">HELLMOUTH / SUNNYVALE / LOUISIANA</span>
+        </div>
+
+        <div class="season-hero" role="img" aria-label="Imagem da página de episódios"></div>
+
+        <div class="season-description">
+          <div>
+            <span class="eyebrow">PRIMEIRA TEMPORADA</span>
+            <h1 id="season-title">First Taste<span class="period">.</span></h1>
+            <span class="season-episode-number">EPISÓDIO 1</span>
+          </div>
+
+          <p><em>O cemitério de Sunnyvale não era exatamente um lugar agradável para passear, pelo menos para quem se importava com a companhia dos mortos.</em></p>
+        </div>
+      </section>
+
+      <section class="chapter-list" aria-labelledby="episodes-heading">
+        <div class="chapters-topline">
+          <div>
+            <span class="eyebrow">02 / EPISODES</span>
+            <h2 id="episodes-heading">Os episódios</h2>
+          </div>
+          <span class="chapters-hint">CLIQUE NA IMAGEM PARA ABRIR O EPISÓDIO NO LOREVERSE ↗</span>
+        </div>
+
+        <div class="chapter-grid" id="episode-list"></div>
+        <p class="no-results" id="list-empty" hidden>Nenhum episódio encontrado.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© HELLMOUTH</span></footer>
+  </div>
+
+  <script src="../assets/episodes.js"></script>
+  <script src="../assets/nav.js"></script>
+</body>
+</html>

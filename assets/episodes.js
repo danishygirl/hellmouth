@@ -10,7 +10,7 @@ const episodes = [
     title: 'First Taste',
     summary: 'O cemitério de Sunnyvale não era exatamente um lugar agradável para passear, pelo menos para quem se importava com a companhia dos mortos.',
     image: '../assets/scenes/first-taste-poster.webp',
-    episodeUrl: '#',
+    episodeUrl: 'https://loreverse.world/threads/1585',
     pending: false
   },
   { id:'s1e2', number:'S1E2', title:'TBA', pending:true },

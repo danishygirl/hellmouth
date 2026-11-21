@@ -1,0 +1,37 @@
+HELLMOUTH — FATE & FORTUNE (módulo integrado)
+
+O QUE FOI MODIFICADO
+- index.html: novo sexto cartão DADOS, sem mudar os cinco originais.
+- assets/styles.css: estilos apenas para o sexto cartão.
+- pages/dados.html: nova página seguindo a navegação e estética do site.
+- assets/dados.css, assets/dados.js, assets/dados-card.svg: arquivos da nova página.
+- functions/api/roll.js e functions/api/rolls.js: serviços para sortear, gravar e consultar dados.
+- migrations/0001_create_rolls.sql: tabela do histórico.
+As outras páginas e arquivos existentes foram preservados.
+
+PUBLICAÇÃO
+1. Publique este repositório num projeto CLOUDFLARE PAGES vinculado ao GitHub.
+   ATENÇÃO: deploy pelo Git/Pages com suporte a Pages Functions. Um upload estático ou
+   abrir o HTML localmente NÃO ativa as funções /api/roll e /api/rolls.
+2. No painel da Cloudflare, crie um banco Cloudflare D1 para o histórico.
+3. Em Pages > projeto > Settings > Bindings, associe o banco D1 à variável DB.
+   Confirme que o binding vale para Production (e Preview, se necessário).
+4. No console D1, execute o SQL de migrations/0001_create_rolls.sql.
+   Alternativa com Wrangler, dentro do projeto:
+   npx wrangler d1 execute NOME_DO_BANCO --remote --file=migrations/0001_create_rolls.sql
+5. Refaça o deploy para as funções receberem o binding.
+6. Abra /pages/dados.html no domínio do site, teste um D20 e atualize a página
+   ou abra em outro dispositivo para verificar o histórico compartilhado.
+
+SEGURANÇA E LIMITAÇÕES
+- Não há contas; qualquer pessoa pode escrever o nome de qualquer personagem.
+- A rolagem é sorteada e registrada no servidor D1, mas uma mesma pessoa pode rolar
+  várias vezes. Só a PRIMEIRA rolagem autorizada por ação deve ser considerada válida.
+- Cada tentativa aparece no histórico, que não tem interface de exclusão/edição.
+- Antes de divulgar amplamente, configure proteção anti-spam (Cloudflare WAF /
+  rate limits e, se necessário, Turnstile validado no servidor). Esta versão
+  NÃO inclui controles de rate limiting nem verificação de identidade.
+- Não existe limpeza automática do banco. Configure backups D1 e retenção.
+- Se o banco não estiver pronto, a interface informa que o histórico está indisponível
+  e NÃO mostra resultados fictícios.
+- O histórico é público: não inclua informações pessoais/sensíveis nas ações.

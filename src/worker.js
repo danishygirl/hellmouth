@@ -1,4 +1,4 @@
-// HELL MOUTH — Fate & Fortune API / Cloudflare Workers
+// HELL MOUTH — Dados API / Cloudflare Workers
 // Cloudflare D1 is automatically provisioned by wrangler during deploy.
 const headers = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' };
 const json = (data, status=200) => new Response(JSON.stringify(data), { status, headers });

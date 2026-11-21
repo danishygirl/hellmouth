@@ -44,3 +44,22 @@
 .dice-footer { margin-top:95px; }
 @media(max-width:760px){.dice-page{padding-top:20px}.dice-heading{padding:32px 0 40px}.dice-columns{grid-template-columns:1fr;gap:65px;padding-top:38px}.dice-history-head h2{margin-bottom:28px}.dice-footer{margin-top:70px}.dice-heading h1{font-size:clamp(49px,11vw,74px)}}
 @media(max-width:420px){.dice-record{grid-template-columns:45px minmax(0,1fr);gap:12px}.dice-value{font-size:39px}.dice-history-head{flex-wrap:wrap}}
+
+/* Sistema 3D3: controles discretos e resultados editoriais */
+.dice-settings{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+.dice-settings .dice-field{margin-bottom:22px}
+.dice-settings input[readonly]{color:#797c77;cursor:default}
+.dice-probability{font:600 10px/1.6 Calibri,'Segoe UI',Arial,sans-serif;letter-spacing:.10em;color:#484b47;margin:3px 0 8px}
+.dice-hint{font-size:11px;line-height:1.7;color:#777977;margin:0 0 20px}
+.dice-result:not([hidden]){display:block}
+.dice-result-heading{display:block;font-size:9px;letter-spacing:.14em;color:#777977;margin-bottom:18px}
+.dice-face-row{display:flex;gap:12px;margin-bottom:15px}
+.dice-face{display:grid;place-items:center;min-width:48px;height:48px;border:1px solid var(--line);font:400 25px/1 Georgia,serif}
+.dice-result-summary{display:flex;align-items:center;gap:20px}
+.dice-result-summary strong{margin:0}
+.dice-result-summary b{display:block;font:600 13px/1.5 Calibri,'Segoe UI',Arial,sans-serif}
+.dice-result-summary small{display:block;margin-top:5px;line-height:1.6}
+.dice-roll-breakdown{margin-top:8px;font-size:11px;color:#777977}
+.dice-outcome{font-size:11px;font-weight:600;margin-top:6px}
+.dice-outcome-grave,.dice-outcome-failure{color:#7c514d}
+@media(max-width:430px){.dice-settings{column-gap:12px}.dice-face{min-width:42px;height:42px}}

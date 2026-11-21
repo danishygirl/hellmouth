@@ -12,26 +12,37 @@
     <header class="masthead"><a class="wordmark" href="../index.html" aria-label="Hellmouth, início">HELLMOUTH<span class="wordmark-point">.</span></a></header>
     <nav class="hm-page-nav" aria-label="Navegação entre páginas"></nav>
     <main class="dice-page"><header class="dice-heading">
-      <p class="dice-eyebrow">SUNNYVALE, LOUISIANA <span>—</span> FILE 006 / CHANCE</p>
+      <p class="dice-eyebrow">SUNNYVALE, LOUISIANA <span>—</span> FILE 006 / DICE</p>
       <h1>Dados<span class="dice-dot">.</span></h1>
-      <p class="dice-lead">Alguns destinos são escritos em sangue. Outros, lançados ao acaso.</p>
+      <p class="dice-lead">Três dados. Uma dificuldade. As consequências pertencem à história.</p>
     </header>
     <div class="dice-rule"></div>
     <section class="dice-columns" aria-label="Rolador e histórico">
       <form class="dice-form" id="roll-form">
         <p class="dice-section-no">01 / THE ROLL</p>
-        <h2>Convoque o acaso.</h2>
+        <h2>Faça sua rolagem.</h2>
         <div class="dice-field"><label for="character">PERSONAGEM</label><input id="character" name="character" maxlength="70" required placeholder="Nome do personagem" autocomplete="off"></div>
         <div class="dice-field"><label for="episode">EPISÓDIO / CENA</label><input id="episode" name="episode" maxlength="100" placeholder="Ex.: S01E01 — Welcome to Sunnyvale"></div>
         <div class="dice-field"><label for="action">AÇÃO</label><textarea id="action" name="action" maxlength="280" required rows="3" placeholder="O que está em jogo nesta rolagem?"></textarea></div>
-        <div class="dice-field"><label for="die">TIPO DE DADO</label><div class="dice-select-wrap"><select id="die" name="die"><option value="4">D4</option><option value="6">D6</option><option value="8">D8</option><option value="10">D10</option><option value="12">D12</option><option value="20" selected>D20</option><option value="100">D100</option></select></div></div>
+        <div class="dice-settings">
+          <div class="dice-field"><label for="dice-count">QUANTIDADE DE DADOS</label><input id="dice-count" type="text" value="3 dados" readonly aria-label="3 dados"></div>
+          <div class="dice-field"><label for="dice-sides">LADOS POR DADO</label><input id="dice-sides" type="text" value="3 lados (D3)" readonly aria-label="3 lados por dado"></div>
+          <div class="dice-field"><label for="difficulty">DIFICULDADE</label><div class="dice-select-wrap"><select id="difficulty" name="difficulty"><option value="5">5 · Fácil</option><option value="6">6 · Moderada</option><option value="7" selected>7 · Difícil</option><option value="8">8 · Muito difícil</option><option value="9">9 · Extrema</option></select></div></div>
+          <div class="dice-field"><label for="modifier">MODIFICADOR</label><div class="dice-select-wrap"><select id="modifier" name="modifier"><option value="-2">−2 · Grande desvantagem</option><option value="-1">−1 · Desvantagem</option><option value="0" selected>0 · Sem modificador</option><option value="1">+1 · Vantagem</option><option value="2">+2 · Grande vantagem</option></select></div></div>
+        </div>
+        <p class="dice-probability" id="probability" aria-live="polite"></p>
+        <p class="dice-hint">A soma dos três dados, com o modificador, é comparada à dificuldade. Valores maiores favorecem o sucesso.</p>
         <button type="submit" class="dice-submit" id="roll-button">LANÇAR OS DADOS <span>↗</span></button>
-        <div class="dice-result" id="result" aria-live="polite" hidden><span>RESULTADO REGISTRADO</span><strong id="result-number">—</strong><small id="result-detail"></small></div>
+        <div class="dice-result" id="result" aria-live="polite" hidden>
+          <span class="dice-result-heading">RESULTADO REGISTRADO · <span id="result-id"></span></span>
+          <div class="dice-face-row" id="result-faces"></div>
+          <div class="dice-result-summary"><strong id="result-number">—</strong><div><b id="result-outcome"></b><small id="result-detail"></small></div></div>
+        </div>
         <p class="dice-feedback" id="roll-feedback" role="status"></p>
-        <p class="dice-footnote">O resultado é gerado no servidor e arquivado publicamente. Apenas a primeira rolagem autorizada de cada ação deve ser considerada válida. Sem cadastro, o nome informado não comprova a identidade do jogador.</p>
+        <p class="dice-footnote">O resultado é gerado e registrado pelo servidor. O histórico é público; cada tentativa recebe um número único. A primeira rolagem autorizada de uma ação deve ser considerada válida. Sem cadastro, o nome informado não comprova a identidade do jogador.</p>
       </form>
       <section class="dice-history" aria-label="Histórico público">
-        <div class="dice-history-head"><div><p class="dice-section-no">02 / THE RECORD</p><h2>O destino não esquece.</h2></div><button id="refresh" type="button" class="dice-refresh">ATUALIZAR ↗</button></div>
+        <div class="dice-history-head"><div><p class="dice-section-no">02 / THE RECORD</p><h2>Histórico público.</h2></div><button id="refresh" type="button" class="dice-refresh">ATUALIZAR ↗</button></div>
         <div class="dice-history-filter"><label for="search">PROCURAR POR PERSONAGEM OU CENA</label><input id="search" type="search" placeholder="Buscar no histórico…" autocomplete="off"></div>
         <p class="dice-feedback" id="history-feedback" role="status">Carregando registros...</p>
         <ol class="dice-records" id="records" aria-live="polite"></ol>

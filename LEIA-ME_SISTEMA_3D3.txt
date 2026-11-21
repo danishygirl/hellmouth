@@ -1,0 +1,12 @@
+HELL MOUTH — DADOS 3D3
+
+Versão com histórico novo e vazio na tabela rolls_v3.
+O banco D1 permanece o mesmo (hellmouth-rolls), mas a API não lê nem importa registros das tabelas rolls e rolls_v2.
+As tabelas antigas não são apagadas por este pacote.
+
+3D3, dificuldade 5 a 9, modificador -2 a +2.
+Interpretação: +2 extraordinário; 0/+1 sucesso; -1 parcial; -2 falha; <= -3 falha grave.
+
+Estrutura pronta para implantação com Wrangler Workers (wrangler.jsonc na raiz, public/ com arquivos estáticos, src/worker.js com API).
+Mantenha os arquivos e diretórios exatamente como estão dentro do ZIP ao atualizar o repositório.
+O histórico é público após a implantação e depende do D1 conectado ao Worker.

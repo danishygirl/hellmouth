@@ -1,0 +1,5 @@
+/* Navegação: botão único, discreto, personalizável. */
+.hm-page-nav{display:flex;align-items:center;padding:11px 0 20px;border-bottom:1px solid #e2e3df;font-family:Calibri,'Segoe UI',Arial,sans-serif}
+.hm-nav-back{font:10px Calibri,'Segoe UI',Arial,sans-serif;letter-spacing:.11em;color:#767976;background:transparent;border:1px solid #dedfdb;border-radius:999px;padding:10px 16px;cursor:pointer;transition:background .18s,color .18s}
+.hm-nav-back:hover,.hm-nav-back:focus-visible{background:#fff;color:#333}
+@media(max-width:550px){.hm-nav-back{padding:9px 13px;font-size:9px}}

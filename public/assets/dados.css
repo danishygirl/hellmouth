@@ -1,0 +1,46 @@
+/* FATE & FORTUNE — extensão editorial do tema HELL MOUTH */
+.dice-site-shell { min-height:100vh; }
+.dice-page { padding:48px 0 10px; }
+.dice-heading { padding:38px 0 59px; }
+.dice-eyebrow,.dice-section-no { color:#868783; font-size:10px; font-weight:600; letter-spacing:.17em; }
+.dice-eyebrow span { display:inline-block; padding:0 9px; }
+.dice-heading h1 { font:400 clamp(48px,7vw,100px)/1.06 Calibri,'Segoe UI',Arial,sans-serif; letter-spacing:-.066em; margin:26px 0 21px; }
+.dice-heading h1 em { font-family:Georgia,serif; font-weight:400; font-size:.84em; }
+.dice-dot { color:#8b8d8a; }
+.dice-lead { max-width:480px; font-size:13px; line-height:1.85; color:#727470; margin:0; }
+.dice-rule { border-top:1px solid var(--line); }
+.dice-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:clamp(35px,7vw,105px); padding-top:55px; }
+.dice-columns h2 { font:400 clamp(28px,3vw,37px)/1.15 Calibri,'Segoe UI',Arial,sans-serif; letter-spacing:-.05em; margin:14px 0 42px; }
+.dice-field { margin-bottom:27px; }
+.dice-field label,.dice-history-filter label { display:block; font-size:9px; font-weight:600; letter-spacing:.15em; margin-bottom:10px; }
+.dice-field input,.dice-field textarea,.dice-field select,.dice-history-filter input { width:100%; font:13px/1.5 Calibri,'Segoe UI',Arial,sans-serif; color:var(--ink); background:transparent; border:none; border-bottom:1px solid var(--line); border-radius:0; outline:0; padding:12px 2px; }
+.dice-field textarea { min-height:76px; resize:vertical; }
+.dice-field input:focus,.dice-field textarea:focus,.dice-field select:focus,.dice-history-filter input:focus { border-color:#111; }
+.dice-field input::placeholder,.dice-field textarea::placeholder,.dice-history-filter input::placeholder { color:#969893; }
+.dice-field select { cursor:pointer; }
+.dice-submit { width:100%; margin-top:7px; padding:18px 21px; background:#181818; border:1px solid #181818; color:#fff; font:600 10px Calibri,'Segoe UI',Arial,sans-serif; letter-spacing:.14em; text-align:left; cursor:pointer; transition:background .2s; }
+.dice-submit span { float:right; }
+.dice-submit:hover { background:#4a4b48; }
+.dice-submit:disabled { opacity:.52; cursor:wait; }
+.dice-footnote { font-size:11px; line-height:1.75; color:#777977; margin:20px 0 0; }
+.dice-result:not([hidden]) { display:flex; align-items:center; gap:15px; border-bottom:1px solid var(--line); margin-top:22px; padding:14px 0; }
+.dice-result span { color:#767874; font-size:9px; letter-spacing:.14em; }
+.dice-result strong { margin-left:auto; font:400 63px/.9 Georgia,serif; }
+.dice-result small { font-size:10px; color:#777; }
+.dice-feedback { color:#777977; font-size:11px; line-height:1.5; min-height:1em; }
+.dice-history-head { display:flex; gap:14px; align-items:flex-start; justify-content:space-between; }
+.dice-history-head h2 { margin-bottom:42px; }
+.dice-refresh,.dice-more { border:0; border-bottom:1px solid #999; background:none; padding:6px 0; color:#666; cursor:pointer; font:600 9px Calibri,'Segoe UI',Arial,sans-serif; letter-spacing:.1em; white-space:nowrap; }
+.dice-history-filter { margin-bottom:28px; }
+.dice-records { list-style:none; padding:0; margin:0; }
+.dice-record { border-top:1px solid var(--line); padding:22px 0; display:grid; grid-template-columns:54px minmax(0,1fr); gap:18px; }
+.dice-value { font:400 46px/1 Georgia,serif; }
+.dice-record-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; margin-bottom:8px; }
+.dice-name { font-weight:600; font-size:13px; }
+.dice-date,.dice-type,.dice-scene { color:#80827e; font-size:10px; line-height:1.6; }
+.dice-scene { margin-top:5px; }
+.dice-action { overflow-wrap:anywhere; font-size:12px; line-height:1.65; color:#545652; margin:7px 0 0; }
+.dice-more { width:100%; padding:18px 0; text-align:center; }
+.dice-footer { margin-top:95px; }
+@media(max-width:760px){.dice-page{padding-top:20px}.dice-heading{padding:32px 0 40px}.dice-columns{grid-template-columns:1fr;gap:65px;padding-top:38px}.dice-history-head h2{margin-bottom:28px}.dice-footer{margin-top:70px}.dice-heading h1{font-size:clamp(49px,11vw,74px)}}
+@media(max-width:420px){.dice-record{grid-template-columns:45px minmax(0,1fr);gap:12px}.dice-value{font-size:39px}.dice-history-head{flex-wrap:wrap}}

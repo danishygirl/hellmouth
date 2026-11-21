@@ -1,0 +1,259 @@
+:root{
+  --episode-bg:#f7f7f6;
+  --episode-card:#fff;
+  --episode-ink:#585b5f;
+  --episode-muted:#9b9da0;
+  --episode-line:#e3e3e1;
+  --episode-round:4px;
+  --season-art:url('episodes-menu-hero.webp');
+  --episode-font:Calibri,'Segoe UI',Arial,sans-serif;
+}
+
+[hidden]{display:none !important;}
+.episodes-page{font-family:var(--episode-font);}
+
+.season-intro{padding:40px 0 96px;}
+.season-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  font-size:10px;
+  color:#9b9b9b;
+  letter-spacing:.12em;
+  margin-bottom:22px;
+}
+.season-breadcrumb{white-space:nowrap;}
+.season-hero{
+  width:100%;
+  height:clamp(280px,38vw,520px);
+  border-radius:3px;
+  overflow:hidden;
+  background-image:
+    linear-gradient(180deg, rgba(5,10,19,.12) 0%, rgba(5,10,19,.16) 100%),
+    var(--season-art);
+  background-size:cover;
+  background-position:center;
+}
+
+.season-description{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(280px,420px);
+  gap:50px;
+  padding-top:34px;
+  align-items:start;
+}
+.season-description h1{
+  font-size:clamp(30px,3.4vw,50px);
+  font-weight:400;
+  letter-spacing:-.055em;
+  margin:14px 0 0;
+}
+.season-episode-number{
+  display:inline-block;
+  margin-top:16px;
+  font-size:10px;
+  letter-spacing:.18em;
+  color:#8c8d90;
+}
+.season-description p{
+  margin:3px 0 0;
+  font-size:14px;
+  line-height:1.9;
+  color:#727478;
+  text-align:justify;
+}
+
+.chapter-list{padding-bottom:100px;}
+.chapters-topline{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:18px;
+  border-bottom:1px solid #cbccca;
+  padding-bottom:16px;
+  margin-bottom:30px;
+}
+.chapters-topline h2{
+  font-weight:400;
+  font-size:27px;
+  margin:12px 0 0;
+}
+.chapters-hint{
+  font-size:9px;
+  color:#999;
+  letter-spacing:.11em;
+  text-align:right;
+}
+
+.chapter-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.episode-poster-link,
+.episode-tile-tba{
+  min-height:460px;
+  border-radius:4px;
+  overflow:hidden;
+}
+
+.episode-poster-link{
+  position:relative;
+  display:block;
+  color:#f2efe8;
+  background:#101418;
+  isolation:isolate;
+  outline-offset:4px;
+  transition:transform .22s ease, filter .22s ease;
+}
+.episode-poster-link:hover,
+.episode-poster-link:focus-visible{
+  transform:translateY(-3px);
+  filter:brightness(1.03);
+}
+.episode-poster-link::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:var(--poster-image);
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.01);
+}
+.episode-poster-link::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to top, rgba(5,8,14,.92) 0%, rgba(5,8,14,.72) 30%, rgba(5,8,14,.16) 62%, rgba(5,8,14,.28) 100%),
+    linear-gradient(to right, rgba(4,8,15,.28), rgba(4,8,15,.12));
+  pointer-events:none;
+}
+
+.episode-poster-copy{
+  position:absolute;
+  inset:auto 0 0;
+  z-index:1;
+  padding:28px 28px 26px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.episode-poster-kicker{
+  font-size:10px;
+  letter-spacing:.22em;
+  color:rgba(255,255,255,.78);
+}
+.episode-poster-title{
+  font-size:clamp(28px,3vw,38px);
+  line-height:1;
+  font-weight:500;
+  letter-spacing:-.055em;
+  margin:0;
+  color:#fff7ef;
+}
+.episode-poster-line{
+  width:100%;
+  height:1px;
+  background:rgba(255,255,255,.26);
+}
+.episode-poster-summary{
+  margin:0;
+  max-width:35ch;
+  font-size:13px;
+  line-height:1.75;
+  color:rgba(255,255,255,.84);
+  text-shadow:0 1px 8px rgba(0,0,0,.32);
+}
+.episode-poster-arrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:10px;
+  letter-spacing:.16em;
+  color:rgba(255,255,255,.82);
+}
+
+.episode-tile-tba{
+  border:1px solid var(--episode-line);
+  background:#fff;
+  padding:28px 30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  color:#96989b;
+}
+.episode-tile-tba .tile-number{
+  font-size:9px;
+  letter-spacing:.22em;
+  color:#a3a3a3;
+}
+.episode-tile-tba h3{
+  font-size:18px;
+  font-weight:500;
+  margin:12px 0 10px;
+}
+.episode-tile-tba .tile-line{
+  height:1px;
+  background:#d5d5d5;
+}
+
+.no-results{font-size:13px;color:#777;}
+
+@media(max-width:930px){
+  .season-description,
+  .chapter-grid{grid-template-columns:1fr;}
+
+  .season-description{gap:26px;}
+  .chapters-topline{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .chapters-hint{text-align:left;}
+  .episode-poster-link,
+  .episode-tile-tba{min-height:520px;}
+}
+
+@media(max-width:680px){
+  .season-intro{padding:26px 0 78px;}
+  .season-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .season-breadcrumb{white-space:normal;}
+  .season-hero{height:clamp(240px,58vw,400px);}
+  .episode-poster-copy{padding:24px 22px 22px;}
+  .episode-poster-title{font-size:32px;}
+  .episode-poster-summary{max-width:none;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .episode-poster-link{transition:none;}
+}
+
+/* V88 — First Taste: pôster horizontal, na mesma largura da imagem da temporada. */
+.chapter-grid > .episode-poster-link {
+  grid-column: 1 / -1;
+  width: 100%;
+  aspect-ratio: 1920 / 711;
+  min-height: 0;
+}
+.episode-poster-link::before {
+  background-position: center center;
+}
+.episode-poster-copy {
+  max-width: 670px;
+  padding: clamp(22px,3.2vw,40px);
+}
+.episode-poster-summary { max-width: 58ch; }
+@media (max-width:680px) {
+  .chapter-grid > .episode-poster-link {
+    aspect-ratio: auto;
+    min-height: 310px;
+  }
+  .episode-poster-copy { max-width: 100%; padding: 24px 22px; }
+  .episode-poster-summary { max-width: 100%; }
+}

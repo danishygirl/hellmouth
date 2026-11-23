@@ -33,6 +33,7 @@ const characters = [
     player: 'nonplayable',
     age: '33 anos',
     photoplayer: 'Finn Wittrock', // Nome do ator que interpreta o personagem
+    occupation: 'A definir', // Ocupação do personagem
     className: 'Humano',
     classIcon: '✦',
     clan: 'Society of Leopold',
@@ -57,6 +58,7 @@ const characters = [
     player: 'nonplayable',
     age: '44 anos',
     photoplayer: 'Dominique Jackson', // Nome do ator/atriz que interpreta o personagem
+    occupation: 'A definir', // Ocupação do personagem
     className: 'Bruxa',
     classIcon: '✦',
     clan: "Manor's Hall",
@@ -82,6 +84,7 @@ const characters = [
     player: 'nonplayable',
     age: '261 anos (aparência de 25 anos)', // Cronologia adotada: transformação em 1790, aos 25
     photoplayer: 'Cody Fern',
+    occupation: 'A definir', // Ocupação do personagem
     className: 'Vampiro',
     classIcon: '✦',
     clan: 'Camarilla: Toreador',
@@ -106,7 +109,8 @@ const characters = [
     player: 'nonplayable',
     age: '35 anos',
     photoplayer: 'Johnny Sibilly',
-    className: 'Shapeshifter',
+    occupation: 'A definir', // Ocupação do personagem
+    className: 'Metamorfo',
     classIcon: '✦',
     clan: 'Blackwood Pack',
     clanIcon: '☽',
@@ -125,117 +129,56 @@ const characters = [
   }
 ];
 
+// HELLMOUTH — galeria de personagens. Edite os dados acima para cadastrar novas fichas.
 const $ = id => document.getElementById(id);
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const cleanUrl = u => { const s = String(u || ''); return /^(https?:\/\/|\.\.\/|\/)/i.test(s) ? s : '#'; };
-const classes = ['Todos', ...new Set(characters.map(c => c.className))];
-let activeClass = 'Todos', activeIndex = 0, returnFocus = null;
-const filters = $('files-filters'), groups = $('files-groups'), empty = $('files-empty'), input = $('files-query'), view = $('character-view');
-
-function drawFilters(){
-  filters.innerHTML = classes.map(c => `<button class="file-filter" type="button" data-class="${esc(c)}" aria-pressed="${c===activeClass}">${esc(c)}</button>`).join('');
-  filters.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { activeClass = b.dataset.class; drawFilters(); drawRows(); }));
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const classes = ['Todos','Humano','Vampiro','Bruxa','Metamorfo'];
+const icons = {
+ Humano:'<circle cx="12" cy="8" r="3"/><path d="M5.5 20c.2-4 2.4-6 6.5-6s6.3 2 6.5 6"/>',
+ Vampiro:'<path d="M5 4l2.4 12L12 21l4.6-5L19 4l-5 5-2-2-2 2z"/><path d="m9 13 3 8 3-8"/>',
+ Bruxa:'<path d="m12 2 1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/><path d="M19 17v5m-2.5-2.5h5"/>',
+ Metamorfo:'<path d="M4 17c2-6 4-10 8-12 4 2 6 6 8 12-3-1-5 0-8 4-3-4-5-5-8-4z"/><path d="M9 13h.01M15 13h.01"/>'
+};
+const icon = cls => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${icons[cls]||icons.Humano}</svg>`;
+let selected='Todos', current=0, focusReturn=null;
+const gallery=$('files-gallery'), search=$('files-query'), modal=$('character-view');
+function renderFilters(){
+ $('files-filters').innerHTML=classes.map(c=>`<button type="button" class="file-filter" data-filter="${esc(c)}" aria-pressed="${c===selected}">${esc(c)}</button>`).join('');
+ $('files-filters').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.filter;renderFilters();renderGallery()}));
 }
-
-// Visual do índice: classe SEM símbolo; clã COM emblema.
-// Este modelo se aplica automaticamente a personagens adicionados no array characters.
-function badge(icon, text, image, type = 'clan'){
-  const visual = type === 'class' ? '' : `<span class="symbol">${image
-    ? `<img class="badge-image" src="${esc(image)}" alt="" loading="lazy">`
-    : esc(icon || '•')}</span>`;
-  return `<span class="character-badge character-badge--${type}">${visual}<span class="text">${esc(text || '—')}</span></span>`;
+function renderGallery(){
+ const q=search.value.trim().toLocaleLowerCase('pt-BR');
+ const filtered=characters.map((c,i)=>({...c,index:i})).filter(c=>(selected==='Todos'||c.className===selected)&&[c.name,c.className,c.clan,c.photoplayer,c.occupation,c.player].join(' ').toLocaleLowerCase('pt-BR').includes(q));
+ gallery.innerHTML=filtered.map(c=>`<button type="button" class="portrait-card" data-index="${c.index}" aria-label="Abrir ficha de ${esc(c.name)}"><img src="${esc(c.portrait||c.avatar)}" alt="${esc(c.name)}" loading="lazy"><span class="class-symbol" title="${esc(c.className)}" aria-label="Classe: ${esc(c.className)}">${icon(c.className)}</span><span class="portrait-caption">${esc(c.name)}</span></button>`).join('');
+ $('files-count').textContent=`${filtered.length} PERSONAGENS`;
+ $('files-empty').hidden=filtered.length>0;
+ gallery.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>openFile(Number(b.dataset.index))));
 }
-
-function drawRows(){
-  const q = input.value.trim().toLocaleLowerCase('pt-BR');
-  let total = 0;
-  groups.innerHTML = classes.slice(1).map(className => {
-    if (activeClass !== 'Todos' && activeClass !== className) return '';
-    const matches = characters.map((c,index)=>({...c,index})).filter(c => c.className === className && [c.name,c.player,c.className,c.clan,c.photoplayer,c.id].join(' ').toLocaleLowerCase('pt-BR').includes(q));
-    if (!matches.length) return '';
-    total += matches.length;
-    return `<section class="files-group">
-      <div class="files-group-top"><h3>${esc(className)}</h3><span>${String(matches.length).padStart(2,'0')} / ENTRIES</span></div>
-      ${matches.map(c => `<div class="character-row">
-        <div class="character-person">
-          <a class="character-avatar" href="${esc(cleanUrl(c.profileUrl))}" ${cleanUrl(c.profileUrl)==='#'?'aria-label="Link do perfil ainda não configurado" aria-disabled="true"':'target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil no Loreverse"'}>
-            <img src="${esc(c.avatar)}" alt="Foto de ${esc(c.name)}" loading="lazy">
-          </a>
-          <div>
-            <button type="button" class="character-name" data-open="${c.index}">${esc(c.name)}</button>
-            <span class="character-sub">${esc(c.id)} / ${esc(c.subtitle)}</span>
-          </div>
-        </div>
-        <span class="character-player">${esc(c.player)}</span>
-        <div class="character-badges">${badge(c.classIcon,c.className,null,'class')}${badge(c.clanIcon,c.clan,c.clanIconImage,'clan')}</div>
-        <button type="button" class="character-open" data-open="${c.index}" aria-label="Abrir ficha de ${esc(c.name)}">↗</button>
-      </div>`).join('')}
-    </section>`;
-  }).join('');
-
-  empty.hidden = !!total;
-  $('files-count').textContent = `${total} registro${total===1?'':'s'}`;
-  groups.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openFile(Number(b.dataset.open))));
+function openFile(i,keepFocus=false){
+ if(!keepFocus)focusReturn=document.activeElement;
+ current=(i+characters.length)%characters.length;
+ const c=characters[current];
+ $('sheet-photo').src=c.portrait||c.avatar;
+ $('sheet-photo').alt=`Retrato de ${c.name}`;
+ $('sheet-title').textContent=c.name;
+ $('sheet-age').textContent=c.age||'A definir';
+ $('sheet-class').textContent=c.className||'A definir';
+ $('sheet-clan').textContent=c.clan||'Nenhum';
+ $('sheet-occupation').textContent=c.occupation||'A definir';
+ $('sheet-photoplayer').textContent=c.photoplayer||'A definir';
+ $('sheet-story').innerHTML=(c.story||[]).map(p=>`<p>${esc(p)}</p>`).join('');
+ $('sheet-story').scrollTop=0;
+ const link=$('sheet-profile-link');
+ if(/^https:\/\//i.test(c.profileUrl||'')){link.href=c.profileUrl;link.hidden=false}else{link.removeAttribute('href');link.hidden=true}
+ modal.hidden=false;modal.setAttribute('aria-hidden','false');document.body.classList.add('character-opened');
+ $('sheet-back').focus();history.replaceState(null,'',`#${encodeURIComponent(c.id)}`);
 }
-
-function openFile(index, preserveFocus=false){
-  if(!preserveFocus) returnFocus = document.activeElement;
-  activeIndex = (index + characters.length) % characters.length;
-  const c = characters[activeIndex];
-
-  $('sheet-code').textContent = `PERSONNEL FILE / ${c.id.toUpperCase()}`;
-  $('sheet-title').textContent = c.name;
-  $('sheet-name').textContent = c.name;
-  $('sheet-subtitle').textContent = c.subtitle;
-  $('sheet-photo').src = c.portrait;
-  $('sheet-photo').alt = `Retrato de ${c.name}`;
-  $('sheet-player').textContent = c.player;
-  $('sheet-age').textContent = c.age;
-  $('sheet-photoplayer').textContent = c.photoplayer || 'A definir';
-  $('sheet-class').textContent = c.className;
-  $('sheet-clan').textContent = c.clan;
-  $('sheet-story').innerHTML = c.story.map(p => `<p>${esc(p)}</p>`).join('');
-  $('sheet-story').scrollTop = 0;
-
-  const link = $('sheet-profile-link');
-  link.href = cleanUrl(c.profileUrl);
-  link.textContent = link.getAttribute('href') === '#' ? 'LINK DO LOREVERSE A CONFIGURAR' : 'PERFIL NO LOREVERSE ↗';
-  link.setAttribute('aria-disabled', link.getAttribute('href') === '#' ? 'true' : 'false');
-
-  $('sheet-items').innerHTML = Array.from({length:3}, (_,i) => {
-    const it = c.items[i];
-    return `<div class="sheet-item">
-      <div class="sheet-item-figure">${it?.image ? `<img src="${esc(it.image)}" alt="${esc(it.name)}">` : `<span>${String(i+1).padStart(2,'0')}</span>`}</div>
-      <div>
-        <h4>${esc(it?.name || 'Espaço vazio')}</h4>
-        <p>${esc(it?.description || 'Nenhum item adquirido.')}</p>
-      </div>
-    </div>`;
-  }).join('');
-
-  view.hidden = false;
-  view.setAttribute('aria-hidden','false');
-  document.body.classList.add('character-opened');
-  view.scrollTop = 0;
-  $('sheet-back').focus();
-  history.replaceState(null,'',`#${encodeURIComponent(c.id)}`);
-}
-
-function closeFile(){
-  view.hidden = true;
-  view.setAttribute('aria-hidden','true');
-  document.body.classList.remove('character-opened');
-  history.replaceState(null,'',location.pathname + location.search);
-  returnFocus?.focus?.();
-}
-
-$('sheet-back').addEventListener('click', closeFile);
-$('sheet-close-bottom').addEventListener('click', closeFile);
-$('sheet-next').addEventListener('click', () => openFile(activeIndex + 1, true));
-input.addEventListener('input', drawRows);
-document.addEventListener('keydown', e => { if(e.key === 'Escape' && !view.hidden) closeFile(); });
-
-drawFilters();
-drawRows();
-const init = characters.findIndex(c => '#'+encodeURIComponent(c.id) === location.hash);
-if(init >= 0) openFile(init);
+function closeFile(){modal.hidden=true;modal.setAttribute('aria-hidden','true');document.body.classList.remove('character-opened');history.replaceState(null,'',location.pathname+location.search);focusReturn?.focus?.()}
+$('sheet-back').addEventListener('click',closeFile);
+$('sheet-next').addEventListener('click',()=>openFile(current+1,true));
+modal.addEventListener('click',e=>{if(e.target===modal)closeFile()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeFile()});
+search.addEventListener('input',renderGallery);
+renderFilters();renderGallery();
+const initial=characters.findIndex(c=>'#'+encodeURIComponent(c.id)===location.hash);
+if(initial>=0)openFile(initial);

@@ -28,6 +28,7 @@
 */
 const characters = [
   {
+    id: 'npc-001',
     name: 'Christian Thorne',
     player: 'nonplayable',
     age: '33 anos',
@@ -52,6 +53,7 @@ const characters = [
     items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
   },
   {
+    id: 'npc-002',
     name: 'Sydra Windsor',
     player: 'nonplayable',
     age: '44 anos',
@@ -77,6 +79,7 @@ const characters = [
   },
   {
     // CASSIAN PENDELTON — todos os campos abaixo podem ser editados pelo GitHub.
+    id: 'npc-003',
     name: 'Cassian Pendleton',
     player: 'nonplayable',
     age: '261 anos (aparência de 25 anos)', // Cronologia adotada: transformação em 1790, aos 25
@@ -101,6 +104,7 @@ const characters = [
     items: [] // Até 3 itens, editáveis aqui.
   },
   {
+    id: 'npc-004',
     name: 'Fenris Molkov',
     player: 'nonplayable',
     age: '35 anos',
@@ -124,7 +128,9 @@ const characters = [
     items: []
   },
    {
+    id: 'player-001',
     name: 'Tobias Castenskiold Ellis-Farar',
+    player: 'playable',
     age: '23 anos',
     photoplayer: 'Oscar Spendrup',
     occupation: 'Nenhum',
@@ -143,7 +149,9 @@ portrait: '../assets/characters/tobias.webp',
     items: []
 },
    {
+    id: 'player-002',
     name: 'Tara Haliwell',
+    player: 'playable',
     age: '26 anos',
     photoplayer: 'Elle Fanning',
     occupation: 'Proprietária da loja Tara Trinkets',
@@ -168,6 +176,7 @@ story: [
 ],
 
     items: [] 
+  }
 ];
 
 // HELLMOUTH — galeria de personagens. Edite os dados acima para cadastrar novas fichas.

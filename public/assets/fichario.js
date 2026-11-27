@@ -124,10 +124,9 @@ const characters = [
     items: []
   },
    {
-    name: 'Riley Rhodes',
-    player: 'playable',
-    age: 'A definir',
-    photoplayer: 'A definir',
+    name: 'Tobias Castenskiold Ellis-Farar',
+    age: '23 anos',
+    photoplayer: 'Oscar Spendrup',
     occupation: 'Garçonete no Moonlight Diner',
     className: 'Humano',
     classIcon: '✦',
@@ -135,12 +134,11 @@ const characters = [
     clanIcon: '',
     clanIconImage: '',
     subtitle: 'SUNNYVALE',
-    avatar: '../assets/characters/riley-rhodes.webp',
-    portrait: '../assets/characters/riley-rhodes.webp',
+   avatar: '../assets/characters/tobias.webp',
+portrait: '../assets/characters/tobias.webp',
     profileUrl: '',
     story: [
-        'Primeiro parágrafo da biografia.',
-        'Segundo parágrafo da biografia.'
+        'De família nobre e riqueza geracional, com um passado coletivo denso e de não pavonear, Tobias não sabia, até pouco tempo, do mundo em que vivia. O ensino superior foi o primeiro aceno para o mundo que sempre lhe fora vedado — aquele que existia para além dos muros do complexo. Aos 23 anos, ele tem aprendido com uma avidez quase frenética as nuances dos diversos ambientes que a sociedade tem a oferecer, percebendo, um pouco tarde, que a redoma de vidro em que cresceu não o preparou para quase nada do que está lá fora.',
     ],
     items: []
 }

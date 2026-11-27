@@ -198,7 +198,28 @@ story: [
     "Em Sunnyvale, Riley é o tipo de pessoa que todos conhecem mas parecem não conseguir entender completamente. Entre turnos diários como bartender no Moonlight Diner e trabalhos ocasionais como babá, Riley tenta levar uma vida relativamente normal. Dona de uma beleza delicada, Riley é muito mais esperta do que suas expressões sonsas e inocentes sugerem. Gentil com quem merece e incapaz de manter a boca fechada diante de injustiças, tem o péssimo hábito de se meter em situações que qualquer pessoa minimamente sensata evitaria. Sua coragem, entretanto, nem sempre acompanha o bom senso. Riley pode enfrentar um vampiro de dois séculos com uma resposta atravessada e cinco minutos depois entrar em pânico por ter esquecido de buscar uma criança na escola. Mas existe algo sobre Riley que torna sua vida ainda mais complicada. Ela consegue ouvir os pensamentos das pessoas, desde cedo aprendendo que a mente humana raramente é tão agradável quanto as palavras que saem da boca, desenvolvendo assim a habilidade de fingir descaradamente que não sabe de nada. Apesar de sua curiosidade pelo sobrenatural, Riley não é nenhuma donzela indefesa esperando que um vampiro misterioso apareça para salvá-la. Por trás dos cílios cuidadosamente delineados e das roupas provocantes existe alguém surpreendentemente obstinado, protetor e disposto a enfrentar criaturas muito mais fortes do que ela própria."
     ],
     items: []
-  }
+  },
+     {
+    id: 'shirley',
+    name: 'Shirley Thorne',
+    player: 'playable',
+    age: '89 anos',
+    photoplayer: 'Inde Navarrette',
+    occupation: 'Nenhum',
+    className: 'Vampiro',
+    classIcon: '✦',
+    clan: 'Camarilla: Malkavian',
+    clanIcon: '',
+    clanIconImage: '',
+    subtitle: 'SUNNYVALE',
+   avatar: '../assets/characters/shirley.webp',
+portrait: '../assets/characters/shirley.webp',
+    profileUrl: '',
+   
+story: [
+    "Em Sunnyvale, Riley é o tipo de pessoa que todos conhecem mas parecem não conseguir entender completamente. Entre turnos diários como bartender no Moonlight Diner e trabalhos ocasionais como babá, Riley tenta levar uma vida relativamente normal. Dona de uma beleza delicada, Riley é muito mais esperta do que suas expressões sonsas e inocentes sugerem. Gentil com quem merece e incapaz de manter a boca fechada diante de injustiças, tem o péssimo hábito de se meter em situações que qualquer pessoa minimamente sensata evitaria. Sua coragem, entretanto, nem sempre acompanha o bom senso. Riley pode enfrentar um vampiro de dois séculos com uma resposta atravessada e cinco minutos depois entrar em pânico por ter esquecido de buscar uma criança na escola. Mas existe algo sobre Riley que torna sua vida ainda mais complicada. Ela consegue ouvir os pensamentos das pessoas, desde cedo aprendendo que a mente humana raramente é tão agradável quanto as palavras que saem da boca, desenvolvendo assim a habilidade de fingir descaradamente que não sabe de nada. Apesar de sua curiosidade pelo sobrenatural, Riley não é nenhuma donzela indefesa esperando que um vampiro misterioso apareça para salvá-la. Por trás dos cílios cuidadosamente delineados e das roupas provocantes existe alguém surpreendentemente obstinado, protetor e disposto a enfrentar criaturas muito mais fortes do que ela própria."
+    ],
+    items: []
 ];
 
 // HELLMOUTH — galeria de personagens. Edite os dados acima para cadastrar novas fichas.

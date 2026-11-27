@@ -127,7 +127,7 @@ const characters = [
     name: 'Tobias Castenskiold Ellis-Farar',
     age: '23 anos',
     photoplayer: 'Oscar Spendrup',
-    occupation: 'Garçonete no Moonlight Diner',
+    occupation: 'Nenhum',
     className: 'Humano',
     classIcon: '✦',
     clan: 'Nenhum',
@@ -141,8 +141,25 @@ portrait: '../assets/characters/tobias.webp',
         'De família nobre e riqueza geracional, com um passado coletivo denso e de não pavonear, Tobias não sabia, até pouco tempo, do mundo em que vivia. O ensino superior foi o primeiro aceno para o mundo que sempre lhe fora vedado — aquele que existia para além dos muros do complexo. Aos 23 anos, ele tem aprendido com uma avidez quase frenética as nuances dos diversos ambientes que a sociedade tem a oferecer, percebendo, um pouco tarde, que a redoma de vidro em que cresceu não o preparou para quase nada do que está lá fora.',
     ],
     items: []
-}
-   
+},
+   {
+    name: 'Tara Haliwell',
+    age: '26 anos',
+    photoplayer: 'Elle Fanning',
+    occupation: 'Proprietária da loja Tara Trinkets',
+    className: 'Bruxa',
+    classIcon: '✦',
+    clan: 'Nenhum',
+    clanIcon: '',
+    clanIconImage: '',
+    subtitle: 'SUNNYVALE',
+   avatar: '../assets/characters/tara.webp',
+portrait: '../assets/characters/tara.webp',
+    profileUrl: '',
+    story: [
+        'Tara Haliwell é proprietária da Tara's Trinkets, uma loja de artigos ocultistas em Sunnyvale, especializada na comercialização de amuletos, cristais, grimórios e outros objetos relacionados ao sobrenatural. Em uma cidade predominantemente conservadora e religiosa, Tara encontrou no ocultismo uma maneira peculiar de ganhar a vida, conquistando até mesmo a clientela mais cética da região. Dona de um senso de humor bastante irônico e de uma evidente habilidade para os negócios, Tara conhece bem as contradições dos moradores de Sunnyvale. A mesma população que condena determinadas práticas sobrenaturais é também responsável por boa parte de suas vendas, especialmente quando a superstição fala mais alto que as convicções religiosas. Tara prefere não questionar a fé de seus clientes, sobretudo quando estão dispostos a gastar dinheiro em sua loja. Entusiasta das festividades locais, tem uma predileção especial pelo Vampire Weekend, ocasião em que pode divulgar seu estabelecimento e aproveitar o interesse dos moradores pelo sobrenatural sem os habituais julgamentos. Apesar de seu interesse pelo ocultismo, Tara demonstra uma personalidade bastante prática. É sociável, observadora e sabe conduzir uma conversa a seu favor, recorrendo à simpatia mesmo diante de pessoas cujas opiniões considera inconvenientes. Sua familiaridade com o lado mais místico de Sunnyvale faz da Tara's Trinkets um curioso ponto de encontro entre a religiosidade da cidade e as superstições que seus habitantes dificilmente admitem cultivar.',
+    ],
+    items: [] 
 ];
 
 // HELLMOUTH — galeria de personagens. Edite os dados acima para cadastrar novas fichas.

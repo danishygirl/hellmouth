@@ -28,7 +28,6 @@
 */
 const characters = [
   {
-    id: 'npc-001',
     name: 'Christian Thorne',
     player: 'nonplayable',
     age: '33 anos',
@@ -53,7 +52,6 @@ const characters = [
     items: [] // Exemplo: {name:'Objeto', description:'Descrição.', image:'../assets/characters/item.webp'}
   },
   {
-    id: 'npc-002',
     name: 'Sydra Windsor',
     player: 'nonplayable',
     age: '44 anos',
@@ -79,7 +77,6 @@ const characters = [
   },
   {
     // CASSIAN PENDELTON — todos os campos abaixo podem ser editados pelo GitHub.
-    id: 'npc-003',
     name: 'Cassian Pendleton',
     player: 'nonplayable',
     age: '261 anos (aparência de 25 anos)', // Cronologia adotada: transformação em 1790, aos 25
@@ -104,7 +101,6 @@ const characters = [
     items: [] // Até 3 itens, editáveis aqui.
   },
   {
-    id: 'npc-004',
     name: 'Fenris Molkov',
     player: 'nonplayable',
     age: '35 anos',
@@ -126,7 +122,29 @@ const characters = [
       'Para a população humana da cidade, Fenris se passa por um empresário recluso do ramo madeireiro, mas, entre os sobrenaturais, ele é o predador supremo cuja presença impõe silêncio e respeito absoluto. Ele protege os seus com garras de ferro, mas pune a traição sem qualquer hesitação.'
     ],
     items: []
-  }
+  },
+   {
+    name: 'Riley Rhodes',
+    player: 'playable',
+    age: 'A definir',
+    photoplayer: 'A definir',
+    occupation: 'Garçonete no Moonlight Diner',
+    className: 'Humano',
+    classIcon: '✦',
+    clan: 'Nenhum',
+    clanIcon: '',
+    clanIconImage: '',
+    subtitle: 'SUNNYVALE',
+    avatar: '../assets/characters/riley-rhodes.webp',
+    portrait: '../assets/characters/riley-rhodes.webp',
+    profileUrl: '',
+    story: [
+        'Primeiro parágrafo da biografia.',
+        'Segundo parágrafo da biografia.'
+    ],
+    items: []
+}
+   
 ];
 
 // HELLMOUTH — galeria de personagens. Edite os dados acima para cadastrar novas fichas.

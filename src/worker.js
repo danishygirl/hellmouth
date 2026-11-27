@@ -1,3 +1,4 @@
+import {adminAPI} from './admin.js';
 // HELL MOUTH — dados 3D3 e histórico persistente (Cloudflare Worker + D1)
 const headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'};
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers});
@@ -58,6 +59,7 @@ async function history(request,db){
 }
 export default {async fetch(request,env){
   const path=new URL(request.url).pathname;
+  if(path==='/api/characters'||path.startsWith('/api/admin/')||path.startsWith('/api/photo/'))return adminAPI(request,env);
   if(path==='/api/roll'||path==='/api/rolls'){
     if(!env.DB)return json({error:'Banco de dados D1 ainda não conectado.'},503);
     try{

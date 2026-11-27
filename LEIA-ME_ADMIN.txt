@@ -1,0 +1,5 @@
+1. No Cloudflare, abra Workers & Pages > hellmouth > Settings > Variables and Secrets. Adicione ADMIN_PASSWORD como Secret, com senha forte de pelo menos 16 caracteres. Não coloque a senha no GitHub.
+2. Substitua os arquivos do repositório pelo conteúdo deste ZIP (sem criar uma pasta extra). Preserve a configuração de deploy e o binding DB existentes. Faça commit e aguarde o deploy.
+3. Abra /admin/ no domínio do site. Entre com a senha. O banco cria as tabelas automaticamente e importa os oito personagens uma única vez.
+4. Teste a edição de uma ficha e confira /pages/fichario.html. Teste também o histórico de dados.
+O painel não aparece no menu público. Sessão de 8 horas, cookie HTTPS HttpOnly e limite de tentativas por IP. Configure proteção adicional de rate limiting no Cloudflare se necessário. O backup JSON contém os cadastros e referências das fotos, não os arquivos de imagem. Fotos novas são convertidas no navegador para WebP (até 1400 px e 750 KB) e armazenadas no D1. Fotos antigas continuam nos assets. Não apague o D1. A exclusão de ficha não apaga a imagem armazenada. O pacote é destinado ao deploy Workers já configurado, não ao modo Pages estático.

@@ -1,7 +1,11 @@
+
 {
   "name": "hellmouth",
   "main": "src/worker.js",
   "compatibility_date": "2026-11-21",
+  "secrets": {
+    "required": ["ADMIN_PASSWORD"]
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
